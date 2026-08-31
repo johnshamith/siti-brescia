@@ -172,6 +172,22 @@ ul.cosa.passi li:last-child{border-bottom:none}
 .riquadro b{color:var(--ink)}
 footer{padding-bottom:60px}
 footer b{color:var(--acc-blocco); opacity:1}
+
+.esempi{display:grid; grid-template-columns:1fr; gap:16px}
+@media(min-width:720px){ .esempi{grid-template-columns:1fr 1fr} }
+.anteprima{padding:38px 22px; text-align:center; min-height:150px; display:flex;
+  flex-direction:column; align-items:center; justify-content:center}
+.anteprima .finto{font-weight:800; font-size:clamp(28px,6vw,42px); line-height:.92; letter-spacing:-.04em}
+.anteprima .sotto-finto{margin-top:12px; font-size:11px; letter-spacing:.2em; text-transform:uppercase; font-weight:700}
+.a-salone{background:#14120F} .a-salone .finto{color:#F2F0EB; font-family:"Bricolage Grotesque",sans-serif} .a-salone .sotto-finto{color:#C8F031}
+.a-pizza{background:#17130E} .a-pizza .finto{color:#F6F1E6; font-family:"Bricolage Grotesque",sans-serif; text-transform:uppercase} .a-pizza .sotto-finto{color:#FF7A3D}
+.a-officina{background:#14181C} .a-officina .finto{color:#EEF0F2; font-family:"Bricolage Grotesque",sans-serif} .a-officina .sotto-finto{color:#FFC400}
+.a-estetista{background:#1E3A2F} .a-estetista .finto{color:#EDF2ED; font-family:"Karla",serif; font-weight:400; letter-spacing:-.01em} .a-estetista .sotto-finto{color:#D9B08C}
+.a-palestra{background:#0A0A0B} .a-palestra .finto{color:#F4F4F2; font-family:"Bricolage Grotesque",sans-serif; text-transform:uppercase} .a-palestra .sotto-finto{color:#D6FF3D}
+.esempio .info{padding:20px 22px}
+.esempio .t{font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:19px; letter-spacing:-.02em}
+.esempio .d{color:var(--ink-2); font-size:14.5px; margin-top:5px}
+.esempio .go{margin-top:12px; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); font-weight:700}
 </style>
 </head>
 <body>
@@ -209,20 +225,64 @@ footer b{color:var(--acc-blocco); opacity:1}
 
 <section class="blocco" style="padding-top:0">
   <div class="centro">
-    <div class="titolo"><h2>Un esempio</h2><span class="tag">negozio inventato</span></div>
-    <a class="esempio" href="salone/">
-      <div class="anteprima">
-        <div class="finto">Salone<br>Marta</div>
-        <div class="sotto-finto">Parrucchiere &middot; Brescia</div>
-      </div>
-      <div class="info">
-        <div>
-          <div class="t">Salone Marta</div>
-          <div class="d">Listino con i prezzi, orari, indirizzo, tasto per scrivere su WhatsApp. Il salone non esiste: serve solo per far vedere com&rsquo;&egrave; fatto un sito.</div>
+    <div class="titolo"><h2>Cinque esempi</h2><span class="tag">negozi inventati</span></div>
+    <div class="esempi">
+      <a class="esempio" href="salone/">
+        <div class="anteprima a-salone">
+          <div class="finto">Salone Marta</div>
+          <div class="sotto-finto">Parrucchiere</div>
         </div>
-        <div class="go">Aprilo &rarr;</div>
-      </div>
-    </a>
+        <div class="info">
+          <div class="t">Parrucchiere</div>
+          <div class="d">Listino, orari, galleria e tasto WhatsApp. Grafica netta, colori forti.</div>
+          <div class="go">Aprilo →</div>
+        </div>
+      </a>
+      <a class="esempio" href="pizzeria/">
+        <div class="anteprima a-pizza">
+          <div class="finto">da Nino</div>
+          <div class="sotto-finto">Pizzeria</div>
+        </div>
+        <div class="info">
+          <div class="t">Pizzeria</div>
+          <div class="d">Menù completo con i prezzi, orari lunghi, asporto. Fondo scuro e arancio brace.</div>
+          <div class="go">Aprilo →</div>
+        </div>
+      </a>
+      <a class="esempio" href="officina/">
+        <div class="anteprima a-officina">
+          <div class="finto">Bertoli</div>
+          <div class="sotto-finto">Officina</div>
+        </div>
+        <div class="info">
+          <div class="t">Officina e gommista</div>
+          <div class="d">Prezzi per ogni lavoro, preventivo gratis. Stile officina: giallo e acciaio.</div>
+          <div class="go">Aprilo →</div>
+        </div>
+      </a>
+      <a class="esempio" href="estetista/">
+        <div class="anteprima a-estetista">
+          <div class="finto">Studio Aura</div>
+          <div class="sotto-finto">Estetica</div>
+        </div>
+        <div class="info">
+          <div class="t">Centro estetico</div>
+          <div class="d">Trattamenti e listino completo, tono calmo. Verde bosco e rame.</div>
+          <div class="go">Aprilo →</div>
+        </div>
+      </a>
+      <a class="esempio" href="palestra/">
+        <div class="anteprima a-palestra">
+          <div class="finto">Ferro</div>
+          <div class="sotto-finto">Palestra</div>
+        </div>
+        <div class="info">
+          <div class="t">Palestra</div>
+          <div class="d">Abbonamenti a confronto, orario corsi in tabella. Nero e giallo lampo.</div>
+          <div class="go">Aprilo →</div>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 

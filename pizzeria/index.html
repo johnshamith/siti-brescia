@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pizzeria da Nino</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;700&display=swap">
+<style>
+:root{
+  --ground:#F6F1E6; --card:#FFFFFF; --sunk:#EBE4D5;
+  --ink:#17130E; --ink-2:#5B5145; --ink-3:#8C8172;
+  --linea:#E0D8C7; --linea-forte:#C4B9A2;
+  --brace:#E4521B; --brace-b:#FBE3D6;
+  --scuro:#17130E; --su-scuro:#F6F1E6; --acc-scuro:#FF7A3D;
+  --bordo:4px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --ground:#100D09; --card:#1A1611; --sunk:#16120D;
+  --ink:#F4EFE4; --ink-2:#A89C8A; --ink-3:#7E7364;
+  --linea:#2A241B; --linea-forte:#3D3528;
+  --brace:#FF7A3D; --brace-b:#2C160B;
+}}
+:root[data-theme="dark"]{
+  --ground:#100D09; --card:#1A1611; --sunk:#16120D;
+  --ink:#F4EFE4; --ink-2:#A89C8A; --ink-3:#7E7364;
+  --linea:#2A241B; --linea-forte:#3D3528;
+  --brace:#FF7A3D; --brace-b:#2C160B;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Karla",system-ui,sans-serif; font-size:17px; line-height:1.55;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden}
+h1,h2,h3{margin:0; font-family:"Anton","Karla",sans-serif; font-weight:400;
+  text-transform:uppercase; letter-spacing:.01em; text-wrap:balance}
+a{color:inherit}
+.centro{max-width:1000px; margin:0 auto; padding:0 20px}
+.avviso{background:var(--scuro); color:var(--su-scuro); font-size:11.5px; letter-spacing:.16em;
+  text-transform:uppercase; text-align:center; padding:10px 16px; font-weight:700}
+
+.hero{background:var(--scuro); color:var(--su-scuro); padding:52px 0 46px}
+.forno{display:inline-block; border:2px solid var(--acc-scuro); color:var(--acc-scuro);
+  font-size:11.5px; letter-spacing:.22em; text-transform:uppercase; font-weight:700;
+  padding:7px 14px; margin-bottom:26px}
+h1{font-size:clamp(54px,16vw,146px); line-height:.85; color:var(--su-scuro)}
+h1 em{font-style:normal; color:var(--acc-scuro)}
+.hero p{margin:22px 0 0; font-size:clamp(17px,2.2vw,21px); opacity:.8; max-width:34ch}
+.bottoni{display:flex; flex-wrap:wrap; gap:10px; margin-top:30px}
+.bt{display:inline-block; text-decoration:none; font-family:"Anton",sans-serif; text-transform:uppercase;
+  letter-spacing:.06em; font-size:16px; padding:16px 30px; border-radius:var(--bordo)}
+.bt.pieno{background:var(--acc-scuro); color:#17130E}
+.bt.filo{border:2px solid var(--su-scuro); color:var(--su-scuro)}
+.bt.brace{background:var(--brace); color:#FFFFFF}
+.bt:focus-visible{outline:3px solid var(--acc-scuro); outline-offset:3px}
+
+.striscia{background:var(--acc-scuro); color:#17130E; padding:14px 0; overflow:hidden}
+.scorre{display:inline-flex; gap:30px; white-space:nowrap; font-family:"Anton",sans-serif;
+  text-transform:uppercase; letter-spacing:.16em; font-size:15px; animation:va 24s linear infinite}
+@keyframes va{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@media (prefers-reduced-motion: reduce){ .scorre{animation:none} }
+
+section{padding:56px 0}
+.titolo{display:flex; align-items:baseline; gap:14px; margin-bottom:28px; flex-wrap:wrap}
+h2{font-size:clamp(30px,6vw,54px)}
+.tag{font-family:"Karla",sans-serif; font-size:12px; letter-spacing:.16em; text-transform:uppercase;
+  font-weight:700; color:var(--brace); background:var(--brace-b); padding:6px 12px; border-radius:99px}
+
+.menu{display:grid; grid-template-columns:1fr; column-gap:52px}
+@media(min-width:760px){ .menu{grid-template-columns:1fr 1fr} }
+.piatto{display:flex; align-items:baseline; gap:12px; padding:14px 0; border-bottom:1px solid var(--linea)}
+.piatto .n{font-weight:700}
+.piatto .d{display:block; font-weight:400; font-size:14.5px; color:var(--ink-3); margin-top:2px}
+.piatto .punti{flex:1; border-bottom:1.5px dotted var(--linea-forte); transform:translateY(-4px); min-width:16px}
+.piatto .p{font-family:"Anton",sans-serif; font-size:20px; font-variant-numeric:tabular-nums; white-space:nowrap}
+
+.galleria{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+@media(min-width:760px){ .galleria{grid-template-columns:repeat(4,1fr)} }
+.foto{aspect-ratio:1/1; background:var(--sunk); border:1.5px dashed var(--linea-forte);
+  border-radius:var(--bordo); display:flex; align-items:center; justify-content:center; padding:16px}
+.foto span{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3);
+  text-align:center; font-weight:700; line-height:1.6}
+
+.due{display:grid; grid-template-columns:1fr; gap:30px}
+@media(min-width:840px){ .due{grid-template-columns:1fr 1fr; gap:50px} }
+.orari{background:var(--card); border:1px solid var(--linea); border-radius:var(--bordo); overflow:hidden}
+.o-riga{display:flex; justify-content:space-between; gap:16px; padding:14px 20px; border-bottom:1px solid var(--linea)}
+.o-riga:last-child{border-bottom:none}
+.o-riga .h{font-variant-numeric:tabular-nums; color:var(--ink-2)}
+.o-riga.chiuso, .o-riga.chiuso .h{color:var(--ink-3)}
+.dove p{margin:0 0 14px; color:var(--ink-2)}
+.dove .grande{font-family:"Anton",sans-serif; font-size:24px; color:var(--ink); margin-bottom:4px; text-transform:none}
+
+.dice{background:var(--brace); color:#FFFFFF; border-radius:var(--bordo); padding:38px 30px}
+.dice p{margin:0; font-family:"Anton",sans-serif; font-size:clamp(22px,3.6vw,36px);
+  line-height:1.12; text-transform:uppercase}
+.dice .chi{margin-top:16px; font-family:"Karla",sans-serif; font-size:13px; letter-spacing:.14em;
+  text-transform:uppercase; opacity:.85; font-weight:700}
+
+footer{background:var(--scuro); color:var(--su-scuro); padding:48px 0 120px}
+footer .nome{font-family:"Anton",sans-serif; font-size:30px; text-transform:uppercase}
+footer p{margin:12px 0 0; font-size:15px; opacity:.7; line-height:1.7}
+
+.barra-giu{position:fixed; left:0; right:0; bottom:0; z-index:9;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:var(--ground); border-top:2px solid var(--linea-forte);
+  display:flex; gap:12px; align-items:center; justify-content:space-between}
+.barra-giu .q{font-family:"Anton",sans-serif; font-size:16px; text-transform:uppercase; line-height:1.2}
+.barra-giu .q small{display:block; font-family:"Karla",sans-serif; font-size:13px; color:var(--ink-2); text-transform:none}
+.barra-giu .bt{padding:13px 22px; font-size:15px}
+</style>
+</head>
+<body>
+
+<div class="avviso">Sito di esempio &middot; questa pizzeria non esiste</div>
+
+<div class="hero">
+  <div class="centro">
+    <div class="forno">Forno a legna dal 1988</div>
+    <h1>Pizzeria<br><em>da Nino</em></h1>
+    <p>Impasto a lievitazione lunga, 48 ore. Da asporto o al tavolo, in centro a Brescia.</p>
+    <div class="bottoni">
+      <a class="bt pieno" href="#prenota">Prenota un tavolo</a>
+      <a class="bt filo" href="#menu">Guarda il men&ugrave;</a>
+    </div>
+  </div>
+</div>
+
+<div class="striscia">
+  <div class="scorre">
+    <span>Forno a legna &nbsp;&bull;&nbsp; Impasto 48 ore &nbsp;&bull;&nbsp; Asporto &nbsp;&bull;&nbsp; Senza glutine &nbsp;&bull;&nbsp; Fritti &nbsp;&bull;&nbsp;</span>
+    <span>Forno a legna &nbsp;&bull;&nbsp; Impasto 48 ore &nbsp;&bull;&nbsp; Asporto &nbsp;&bull;&nbsp; Senza glutine &nbsp;&bull;&nbsp; Fritti &nbsp;&bull;&nbsp;</span>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="centro">
+    <div class="titolo"><h2>Le pizze</h2><span class="tag">Impasto 48 ore</span></div>
+    <div class="menu">
+      <div class="piatto"><span class="n">Margherita<span class="d">pomodoro, fiordilatte, basilico</span></span><span class="punti"></span><span class="p">6,50</span></div>
+      <div class="piatto"><span class="n">Marinara<span class="d">pomodoro, aglio, origano</span></span><span class="punti"></span><span class="p">5,50</span></div>
+      <div class="piatto"><span class="n">Diavola<span class="d">salame piccante, fiordilatte</span></span><span class="punti"></span><span class="p">8,00</span></div>
+      <div class="piatto"><span class="n">Quattro formaggi<span class="d">gorgonzola, taleggio, grana, fiordilatte</span></span><span class="punti"></span><span class="p">9,00</span></div>
+      <div class="piatto"><span class="n">Bufala e datterini<span class="d">mozzarella di bufala, pomodorini</span></span><span class="punti"></span><span class="p">10,00</span></div>
+      <div class="piatto"><span class="n">Ortolana<span class="d">verdure di stagione grigliate</span></span><span class="punti"></span><span class="p">8,50</span></div>
+      <div class="piatto"><span class="n">Nino<span class="d">salsiccia, friarielli, provola</span></span><span class="punti"></span><span class="p">10,50</span></div>
+      <div class="piatto"><span class="n">Senza glutine<span class="d">supplemento su ogni pizza</span></span><span class="punti"></span><span class="p">+2,00</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="centro">
+    <div class="titolo"><h2>Fritti e dolci</h2></div>
+    <div class="menu">
+      <div class="piatto"><span class="n">Crocch&egrave; di patate<span class="d">tre pezzi</span></span><span class="punti"></span><span class="p">4,00</span></div>
+      <div class="piatto"><span class="n">Montanara</span><span class="punti"></span><span class="p">4,50</span></div>
+      <div class="piatto"><span class="n">Tiramis&ugrave; della casa</span><span class="punti"></span><span class="p">5,00</span></div>
+      <div class="piatto"><span class="n">Coperto</span><span class="punti"></span><span class="p">2,00</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="centro">
+    <div class="titolo"><h2>Il locale</h2><span class="tag">Qui vanno le vostre foto</span></div>
+    <div class="galleria">
+      <div class="foto"><span>Il forno<br>acceso</span></div>
+      <div class="foto"><span>Una<br>pizza</span></div>
+      <div class="foto"><span>La<br>sala</span></div>
+      <div class="foto"><span>Voi<br>al lavoro</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="centro">
+    <div class="dice">
+      <p>&ldquo;La margherita migliore che ho mangiato a Brescia. E costa sei euro e mezzo.&rdquo;</p>
+      <div class="chi">Marco &mdash; cliente</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="centro due">
+    <div class="dove" id="prenota">
+      <div class="titolo"><h2>Dove siamo</h2></div>
+      <p class="grande">Via Milano 42, Brescia</p>
+      <p>Vicino alla stazione. Asporto anche senza prenotare.</p>
+      <p class="grande">030 7654321</p>
+      <p>Si prenota anche scrivendo su WhatsApp.</p>
+      <div class="bottoni"><a class="bt brace" href="#prenota">Scrivi su WhatsApp</a></div>
+    </div>
+    <div>
+      <div class="titolo"><h2>Orari</h2></div>
+      <div class="orari">
+        <div class="o-riga chiuso"><span>Luned&igrave;</span><span class="h">chiuso</span></div>
+        <div class="o-riga"><span>Marted&igrave;</span><span class="h">18:30 &ndash; 23:00</span></div>
+        <div class="o-riga"><span>Mercoled&igrave;</span><span class="h">18:30 &ndash; 23:00</span></div>
+        <div class="o-riga"><span>Gioved&igrave;</span><span class="h">18:30 &ndash; 23:00</span></div>
+        <div class="o-riga"><span>Venerd&igrave;</span><span class="h">18:30 &ndash; 00:00</span></div>
+        <div class="o-riga"><span>Sabato</span><span class="h">18:30 &ndash; 00:00</span></div>
+        <div class="o-riga"><span>Domenica</span><span class="h">12:00 &ndash; 14:30 &middot; 18:30 &ndash; 23:00</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="centro">
+    <div class="nome">Pizzeria da Nino</div>
+    <p>Via Milano 42, Brescia &middot; 030 7654321<br>Marted&igrave; &ndash; Domenica &middot; asporto e sala</p>
+  </div>
+</footer>
+
+<div class="barra-giu">
+  <div class="q">Margherita 6,50 &euro;<br><small>Asporto in 15 minuti</small></div>
+  <a class="bt brace" href="#prenota">Prenota</a>
+</div>
+
+</body>
+</html>

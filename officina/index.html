@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Officina Bertoli</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;700&display=swap">
+<style>
+:root{
+  --ground:#EEF0F2; --card:#FFFFFF; --sunk:#E0E4E8;
+  --ink:#14181C; --ink-2:#4E565E; --ink-3:#7C858E;
+  --linea:#D5DADF; --linea-forte:#B4BCC4;
+  --giallo:#FFC400; --su-giallo:#14181C;
+  --acciaio:#14181C; --su-acciaio:#EEF0F2;
+  --bordo:2px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --ground:#0B0E11; --card:#151A1F; --sunk:#10151A;
+  --ink:#EAEEF2; --ink-2:#9AA4AE; --ink-3:#727C86;
+  --linea:#232A31; --linea-forte:#343D46;
+  --giallo:#FFD22E; --su-giallo:#14181C;
+}}
+:root[data-theme="dark"]{
+  --ground:#0B0E11; --card:#151A1F; --sunk:#10151A;
+  --ink:#EAEEF2; --ink-2:#9AA4AE; --ink-3:#727C86;
+  --linea:#232A31; --linea-forte:#343D46;
+  --giallo:#FFD22E; --su-giallo:#14181C;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Inter",system-ui,sans-serif; font-size:17px; line-height:1.55;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden}
+h1,h2,h3{margin:0; font-family:"Archivo","Inter",sans-serif; font-weight:800;
+  letter-spacing:-.03em; text-wrap:balance}
+a{color:inherit}
+.centro{max-width:1020px; margin:0 auto; padding:0 20px}
+.avviso{background:var(--acciaio); color:var(--su-acciaio); font-size:11.5px; letter-spacing:.16em;
+  text-transform:uppercase; text-align:center; padding:10px 16px; font-weight:700;
+  font-family:"IBM Plex Mono",monospace}
+
+.hero{background:var(--acciaio); color:var(--su-acciaio); padding:0}
+.strisce{height:14px; background:repeating-linear-gradient(45deg,var(--giallo) 0 22px,var(--acciaio) 22px 44px)}
+.hero .centro{padding-top:48px; padding-bottom:44px}
+.matricola{font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--giallo); margin-bottom:22px}
+h1{font-size:clamp(44px,12vw,110px); line-height:.9; color:var(--su-acciaio)}
+h1 em{font-style:normal; color:var(--giallo)}
+.hero p{margin:22px 0 0; font-size:clamp(17px,2.2vw,21px); opacity:.78; max-width:36ch}
+.bottoni{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px}
+.bt{display:inline-block; text-decoration:none; font-family:"Archivo",sans-serif; font-weight:800;
+  font-size:16px; padding:15px 28px; border-radius:var(--bordo); text-transform:uppercase; letter-spacing:.03em}
+.bt.giallo{background:var(--giallo); color:var(--su-giallo)}
+.bt.filo{border:2px solid var(--su-acciaio); color:var(--su-acciaio)}
+.bt.nero{background:var(--acciaio); color:var(--su-acciaio)}
+.bt:focus-visible{outline:3px solid var(--giallo); outline-offset:3px}
+
+.numeri{background:var(--giallo); color:var(--su-giallo)}
+.numeri .centro{display:grid; grid-template-columns:repeat(3,1fr); gap:2px}
+.n-cella{padding:26px 8px; text-align:center}
+.n-cella .n{font-family:"Archivo",sans-serif; font-weight:800; font-size:clamp(26px,5vw,40px); line-height:1}
+.n-cella .e{font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.14em;
+  text-transform:uppercase; margin-top:8px; opacity:.75}
+
+section{padding:54px 0}
+.titolo{display:flex; align-items:baseline; gap:14px; margin-bottom:26px; flex-wrap:wrap}
+h2{font-size:clamp(28px,5.5vw,46px)}
+.tag{font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+  font-weight:600; color:var(--ink); background:var(--giallo); padding:6px 11px}
+
+.servizi{display:grid; grid-template-columns:1fr; gap:0; border-top:2px solid var(--ink)}
+.riga{display:flex; align-items:center; gap:14px; padding:17px 0; border-bottom:1px solid var(--linea)}
+.riga .cod{font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--ink-3); width:44px; flex:none}
+.riga .voce{flex:1; font-weight:500}
+.riga .voce small{display:block; color:var(--ink-3); font-size:14.5px; font-weight:400}
+.riga .prezzo{font-family:"Archivo",sans-serif; font-weight:800; font-size:19px;
+  font-variant-numeric:tabular-nums; white-space:nowrap}
+
+.galleria{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+@media(min-width:760px){ .galleria{grid-template-columns:repeat(4,1fr)} }
+.foto{aspect-ratio:4/3; background:var(--sunk); border:2px dashed var(--linea-forte);
+  display:flex; align-items:center; justify-content:center; padding:14px}
+.foto span{font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-3); text-align:center; line-height:1.6}
+
+.due{display:grid; grid-template-columns:1fr; gap:30px}
+@media(min-width:840px){ .due{grid-template-columns:1fr 1fr; gap:50px} }
+.orari{border:2px solid var(--ink)}
+.o-riga{display:flex; justify-content:space-between; gap:16px; padding:13px 18px; border-bottom:1px solid var(--linea)}
+.o-riga:last-child{border-bottom:none}
+.o-riga .h{font-family:"IBM Plex Mono",monospace; font-size:15px; color:var(--ink-2)}
+.o-riga.chiuso, .o-riga.chiuso .h{color:var(--ink-3)}
+.dove p{margin:0 0 14px; color:var(--ink-2)}
+.dove .grande{font-family:"Archivo",sans-serif; font-weight:800; font-size:23px; color:var(--ink); margin-bottom:4px}
+
+.avvisone{background:var(--acciaio); color:var(--su-acciaio); padding:34px 28px; border-left:8px solid var(--giallo)}
+.avvisone h3{font-size:clamp(20px,3vw,28px); color:var(--su-acciaio)}
+.avvisone p{margin:10px 0 0; opacity:.8}
+
+footer{background:var(--acciaio); color:var(--su-acciaio); padding:44px 0 118px}
+footer .nome{font-family:"Archivo",sans-serif; font-weight:800; font-size:27px}
+footer p{margin:12px 0 0; font-size:15px; opacity:.7; line-height:1.7}
+
+.barra-giu{position:fixed; left:0; right:0; bottom:0; z-index:9;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:var(--ground); border-top:3px solid var(--giallo);
+  display:flex; gap:12px; align-items:center; justify-content:space-between}
+.barra-giu .q{font-family:"Archivo",sans-serif; font-weight:800; font-size:15px; line-height:1.25}
+.barra-giu .q small{display:block; font-family:"Inter",sans-serif; font-weight:400; font-size:13px; color:var(--ink-2)}
+.barra-giu .bt{padding:13px 20px; font-size:14.5px}
+</style>
+</head>
+<body>
+
+<div class="avviso">Sito di esempio &middot; questa officina non esiste</div>
+
+<div class="hero">
+  <div class="strisce"></div>
+  <div class="centro">
+    <div class="matricola">Meccanico &middot; Gommista &middot; Brescia</div>
+    <h1>Officina<br><em>Bertoli</em></h1>
+    <p>Tagliandi, gomme e revisioni. Preventivo scritto prima di toccare la macchina.</p>
+    <div class="bottoni">
+      <a class="bt giallo" href="#contatti">Chiedi un preventivo</a>
+      <a class="bt filo" href="#prezzi">Vedi i prezzi</a>
+    </div>
+  </div>
+</div>
+
+<div class="numeri">
+  <div class="centro">
+    <div class="n-cella"><div class="n">34</div><div class="e">anni di officina</div></div>
+    <div class="n-cella"><div class="n">24h</div><div class="e">tagliando in giornata</div></div>
+    <div class="n-cella"><div class="n">0 &euro;</div><div class="e">il preventivo</div></div>
+  </div>
+</div>
+
+<section id="prezzi">
+  <div class="centro">
+    <div class="titolo"><h2>Prezzi</h2><span class="tag">IVA compresa</span></div>
+    <div class="servizi">
+      <div class="riga"><span class="cod">01</span><span class="voce">Tagliando completo<small>olio, filtri, controllo 20 punti</small></span><span class="prezzo">da 149 &euro;</span></div>
+      <div class="riga"><span class="cod">02</span><span class="voce">Cambio gomme<small>4 pezzi, montaggio ed equilibratura</small></span><span class="prezzo">60 &euro;</span></div>
+      <div class="riga"><span class="cod">03</span><span class="voce">Cambio stagionale<small>gomme gi&agrave; vostre</small></span><span class="prezzo">40 &euro;</span></div>
+      <div class="riga"><span class="cod">04</span><span class="voce">Pastiglie freni anteriori<small>ricambio e manodopera</small></span><span class="prezzo">da 110 &euro;</span></div>
+      <div class="riga"><span class="cod">05</span><span class="voce">Ricarica aria condizionata</span><span class="prezzo">75 &euro;</span></div>
+      <div class="riga"><span class="cod">06</span><span class="voce">Revisione<small>pratica e accompagnamento</small></span><span class="prezzo">85 &euro;</span></div>
+      <div class="riga"><span class="cod">07</span><span class="voce">Diagnosi centralina</span><span class="prezzo">35 &euro;</span></div>
+      <div class="riga"><span class="cod">08</span><span class="voce">Auto di cortesia<small>su prenotazione</small></span><span class="prezzo">gratis</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="centro">
+    <div class="avvisone">
+      <h3>Prima il preventivo, poi il lavoro</h3>
+      <p>Vi diciamo quanto costa <b>prima</b> di iniziare. Se il conto cambia in corsa, vi chiamiamo. Nessuna sorpresa quando venite a ritirare.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="centro">
+    <div class="titolo"><h2>L&rsquo;officina</h2><span class="tag">Qui vanno le vostre foto</span></div>
+    <div class="galleria">
+      <div class="foto"><span>Il<br>capannone</span></div>
+      <div class="foto"><span>Il<br>ponte</span></div>
+      <div class="foto"><span>Gomme<br>in magazzino</span></div>
+      <div class="foto"><span>Voi<br>al lavoro</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="centro due">
+    <div class="dove" id="contatti">
+      <div class="titolo"><h2>Dove siamo</h2></div>
+      <p class="grande">Via dell&rsquo;Industria 7, Brescia</p>
+      <p>Zona artigianale, parcheggio interno.</p>
+      <p class="grande">030 2233445</p>
+      <p>Per il preventivo mandate marca, modello e anno su WhatsApp.</p>
+      <div class="bottoni"><a class="bt nero" href="#contatti">Scrivi su WhatsApp</a></div>
+    </div>
+    <div>
+      <div class="titolo"><h2>Orari</h2></div>
+      <div class="orari">
+        <div class="o-riga"><span>Luned&igrave;</span><span class="h">08:00 &ndash; 18:00</span></div>
+        <div class="o-riga"><span>Marted&igrave;</span><span class="h">08:00 &ndash; 18:00</span></div>
+        <div class="o-riga"><span>Mercoled&igrave;</span><span class="h">08:00 &ndash; 18:00</span></div>
+        <div class="o-riga"><span>Gioved&igrave;</span><span class="h">08:00 &ndash; 18:00</span></div>
+        <div class="o-riga"><span>Venerd&igrave;</span><span class="h">08:00 &ndash; 18:00</span></div>
+        <div class="o-riga"><span>Sabato</span><span class="h">08:00 &ndash; 12:00</span></div>
+        <div class="o-riga chiuso"><span>Domenica</span><span class="h">chiuso</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="centro">
+    <div class="nome">Officina Bertoli</div>
+    <p>Via dell&rsquo;Industria 7, Brescia &middot; 030 2233445<br>Luned&igrave; &ndash; Sabato &middot; auto di cortesia su prenotazione</p>
+  </div>
+</footer>
+
+<div class="barra-giu">
+  <div class="q">Tagliando da 149 &euro;<br><small>Preventivo gratis</small></div>
+  <a class="bt giallo" href="#contatti">Preventivo</a>
+</div>
+
+</body>
+</html>
