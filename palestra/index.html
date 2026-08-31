@@ -10,22 +10,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap">
 <style>
 :root{
+  color-scheme:light;
   --nero:#F3F3F1; --su-nero:#0A0A0B; --lampo:#5B7A00;
   --ground:#F3F3F1; --card:#FFFFFF; --sunk:#E7E7E4;
   --ink:#0A0A0B; --ink-2:#55555A; --ink-3:#82828A;
   --linea:#DEDEDA; --linea-forte:#BFBFBA;
   --bordo:3px;
 }
-:root[data-theme="dark"]{
-  --ground:#0C0C0D; --card:#151517; --sunk:#111113;
-  --ink:#F3F3F1; --ink-2:#A5A5A1; --ink-3:#7A7A7C;
-  --linea:#232326; --linea-forte:#38383C;
-}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --ground:#0C0C0D; --card:#151517; --sunk:#111113;
-  --ink:#F3F3F1; --ink-2:#A5A5A1; --ink-3:#7A7A7C;
-  --linea:#232326; --linea-forte:#38383C;
-}}
 *{box-sizing:border-box}
 body{margin:0; background:var(--ground); color:var(--ink);
   font-family:"Barlow",system-ui,sans-serif; font-size:17px; line-height:1.55;

@@ -10,24 +10,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;700&display=swap">
 <style>
 :root{
+  color-scheme:light;
   --ground:#F6F1E6; --card:#FFFFFF; --sunk:#EBE4D5;
   --ink:#17130E; --ink-2:#5B5145; --ink-3:#8C8172;
   --linea:#E0D8C7; --linea-forte:#C4B9A2;
   --brace:#E4521B; --brace-b:#FBE3D6;
   --scuro:#FFF4E6; --su-scuro:#1C1208; --acc-scuro:#CF3A11;
   --bordo:4px;
-}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --ground:#100D09; --card:#1A1611; --sunk:#16120D;
-  --ink:#F4EFE4; --ink-2:#A89C8A; --ink-3:#7E7364;
-  --linea:#2A241B; --linea-forte:#3D3528;
-  --brace:#FF7A3D; --brace-b:#2C160B;
-}}
-:root[data-theme="dark"]{
-  --ground:#100D09; --card:#1A1611; --sunk:#16120D;
-  --ink:#F4EFE4; --ink-2:#A89C8A; --ink-3:#7E7364;
-  --linea:#2A241B; --linea-forte:#3D3528;
-  --brace:#FF7A3D; --brace-b:#2C160B;
 }
 *{box-sizing:border-box}
 body{margin:0; background:var(--ground); color:var(--ink);

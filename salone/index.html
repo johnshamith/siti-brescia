@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Karla:wght@400;500;700&display=swap">
 <style>
 :root{
+  color-scheme:light;
   --ground:#EFEDE9; --card:#FFFFFF; --sunk:#E3E0DA;
   --ink:#14120F; --ink-2:#57534B; --ink-3:#8A8478;
   --linea:#DCD8D1; --linea-forte:#BEB8AD;
@@ -17,22 +18,6 @@
   --rosa:#FF5CA8; --rosa-b:#FFE3F0;
   --blocco:#FFF0F6; --su-blocco:#1B1018; --acc-blocco:#C4186F;
   --bordo:20px;
-}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --ground:#0D0C0A; --card:#171613; --sunk:#121110;
-  --ink:#F2F0EB; --ink-2:#A8A296; --ink-3:#7D776B;
-  --linea:#272521; --linea-forte:#3A3730;
-  --lime:#D6FF4A; --su-lime:#14120F;
-  --rosa:#FF7ABA; --rosa-b:#2C1220;
-  --blocco:#FFF0F6; --su-blocco:#1B1018; --acc-blocco:#C4186F;
-}}
-:root[data-theme="dark"]{
-  --ground:#0D0C0A; --card:#171613; --sunk:#121110;
-  --ink:#F2F0EB; --ink-2:#A8A296; --ink-3:#7D776B;
-  --linea:#272521; --linea-forte:#3A3730;
-  --lime:#D6FF4A; --su-lime:#14120F;
-  --rosa:#FF7ABA; --rosa-b:#2C1220;
-  --blocco:#FFF0F6; --su-blocco:#1B1018; --acc-blocco:#C4186F;
 }
 *{box-sizing:border-box}
 body{margin:0; background:var(--ground); color:var(--ink);

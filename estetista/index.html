@@ -10,24 +10,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Jost:wght@300;400;500&display=swap">
 <style>
 :root{
+  color-scheme:light;
   --ground:#E9EEE9; --card:#FFFFFF; --sunk:#DCE4DC;
   --ink:#1A2620; --ink-2:#4E5F56; --ink-3:#7E8D84;
   --linea:#D2DBD2; --linea-forte:#B3BFB4;
   --bosco:#EDF3EE; --su-bosco:#16241D; --acc-bosco:#8A5A3C;
   --rame:#A4674A; --rame-b:#F3E5DC;
   --bordo:0px;
-}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --ground:#0E1512; --card:#161F1A; --sunk:#121A16;
-  --ink:#E9F0EA; --ink-2:#9DAEA3; --ink-3:#77887E;
-  --linea:#24302A; --linea-forte:#354338;
-  --rame:#DC9E7C; --rame-b:#2A1911;
-}}
-:root[data-theme="dark"]{
-  --ground:#0E1512; --card:#161F1A; --sunk:#121A16;
-  --ink:#E9F0EA; --ink-2:#9DAEA3; --ink-3:#77887E;
-  --linea:#24302A; --linea-forte:#354338;
-  --rame:#DC9E7C; --rame-b:#2A1911;
 }
 *{box-sizing:border-box}
 body{margin:0; background:var(--ground); color:var(--ink);

@@ -10,6 +10,7 @@
 <style>
 
 :root{
+  color-scheme:light;
   --ground:#EFEDE9; --card:#FFFFFF; --sunk:#E3E0DA;
   --ink:#14120F; --ink-2:#57534B; --ink-3:#8A8478;
   --linea:#DCD8D1; --linea-forte:#BEB8AD;
@@ -17,22 +18,6 @@
   --rosa:#00A08C; --rosa-b:#D7F4EF;
   --blocco:#EDF0FF; --su-blocco:#0F1430; --acc-blocco:#2B41C9;
   --bordo:20px;
-}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --ground:#0D0C0A; --card:#171613; --sunk:#121110;
-  --ink:#F2F0EB; --ink-2:#A8A296; --ink-3:#7D776B;
-  --linea:#272521; --linea-forte:#3A3730;
-  --lime:#8AA0FF; --su-lime:#FFFFFF;
-  --rosa:#3FD6BE; --rosa-b:#0E2B27;
-  --blocco:#EDF0FF; --su-blocco:#0F1430; --acc-blocco:#2B41C9;
-}}
-:root[data-theme="dark"]{
-  --ground:#0D0C0A; --card:#171613; --sunk:#121110;
-  --ink:#F2F0EB; --ink-2:#A8A296; --ink-3:#7D776B;
-  --linea:#272521; --linea-forte:#3A3730;
-  --lime:#8AA0FF; --su-lime:#FFFFFF;
-  --rosa:#3FD6BE; --rosa-b:#0E2B27;
-  --blocco:#EDF0FF; --su-blocco:#0F1430; --acc-blocco:#2B41C9;
 }
 *{box-sizing:border-box}
 body{margin:0; background:var(--ground); color:var(--ink);
