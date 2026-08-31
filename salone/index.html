@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Salone Marta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Karla:wght@400;500;700&display=swap">
+<style>
+:root{
+  --ground:#F2F1F5; --card:#FFFFFF; --sunk:#E7E5EC;
+  --ink:#161420; --ink-2:#5C5669; --ink-3:#8A849A;
+  --linea:#DEDAE6; --linea-forte:#C3BDD0;
+  --fux:#B62472; --fux-b:#FBE6F1; --su-fux:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --ground:#0F0D14; --card:#191723; --sunk:#141220;
+  --ink:#F1EEF6; --ink-2:#A49DB3; --ink-3:#7C7590;
+  --linea:#2A2636; --linea-forte:#3D3750;
+  --fux:#F274B2; --fux-b:#2B1322; --su-fux:#1A0A12;
+}}
+:root[data-theme="dark"]{
+  --ground:#0F0D14; --card:#191723; --sunk:#141220;
+  --ink:#F1EEF6; --ink-2:#A49DB3; --ink-3:#7C7590;
+  --linea:#2A2636; --linea-forte:#3D3750;
+  --fux:#F274B2; --fux-b:#2B1322; --su-fux:#1A0A12;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Karla",system-ui,-apple-system,sans-serif; font-size:17px; line-height:1.55;
+  -webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0; font-family:"Syne","Karla",sans-serif; letter-spacing:-.03em; text-wrap:balance}
+a{color:inherit}
+.centro{max-width:960px; margin:0 auto; padding:0 22px}
+
+.avviso{background:var(--ink); color:var(--ground); font-size:12.5px; letter-spacing:.14em;
+  text-transform:uppercase; text-align:center; padding:9px 16px; font-weight:700}
+
+header.hero{padding:64px 0 56px; border-bottom:1px solid var(--linea)}
+.marchio{font-family:"Syne",sans-serif; font-weight:800; font-size:14px; letter-spacing:.3em;
+  text-transform:uppercase; color:var(--fux); margin-bottom:26px}
+h1{font-size:clamp(46px,12vw,104px); font-weight:800; line-height:.92}
+h1 em{font-style:normal; color:var(--fux)}
+.occhiello{margin:22px 0 0; font-size:clamp(18px,2.4vw,22px); color:var(--ink-2); max-width:34ch; line-height:1.4}
+.bottoni{display:flex; flex-wrap:wrap; gap:12px; margin-top:34px}
+.bt{display:inline-block; text-decoration:none; font-family:"Syne",sans-serif; font-weight:600;
+  font-size:17px; padding:15px 26px; border-radius:2px; transition:transform .15s ease}
+.bt.pieno{background:var(--fux); color:var(--su-fux)}
+.bt.vuoto{border:1.5px solid var(--linea-forte); color:var(--ink)}
+.bt:hover{transform:translateY(-2px)}
+.bt:focus-visible{outline:3px solid var(--fux); outline-offset:3px}
+@media (prefers-reduced-motion: reduce){ .bt{transition:none} .bt:hover{transform:none} }
+
+.fascia{background:var(--ink); color:var(--ground)}
+.fascia .centro{display:grid; grid-template-columns:repeat(3,1fr); gap:2px}
+.f-cella{padding:30px 10px; text-align:center}
+.f-cella .n{font-family:"Syne",sans-serif; font-size:38px; font-weight:800; line-height:1; color:var(--fux)}
+.f-cella .e{font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; margin-top:9px; opacity:.72}
+
+section.blocco{padding:62px 0}
+.titolo{display:flex; align-items:baseline; gap:16px; margin-bottom:34px; flex-wrap:wrap}
+h2{font-size:clamp(30px,5vw,44px); font-weight:800}
+.titolo span{font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--fux); font-weight:700}
+
+.listino{display:grid; grid-template-columns:1fr; gap:0}
+@media(min-width:760px){ .listino{grid-template-columns:1fr 1fr; column-gap:56px} }
+.voce{display:flex; align-items:baseline; gap:12px; padding:15px 0; border-bottom:1px solid var(--linea)}
+.voce .v-n{font-weight:500}
+.voce .v-p{flex:1; border-bottom:1px dotted var(--linea-forte); transform:translateY(-4px)}
+.voce .v-e{font-family:"Syne",sans-serif; font-weight:600; font-variant-numeric:tabular-nums; white-space:nowrap}
+
+.orari{background:var(--card); border:1px solid var(--linea); border-radius:3px; overflow:hidden}
+.o-riga{display:flex; justify-content:space-between; gap:18px; padding:14px 22px; border-bottom:1px solid var(--linea)}
+.o-riga:last-child{border-bottom:none}
+.o-riga.chiuso{color:var(--ink-3)}
+.o-riga .g{font-weight:500}
+.o-riga .h{font-variant-numeric:tabular-nums; color:var(--ink-2)}
+.o-riga.chiuso .h{color:var(--ink-3)}
+
+.due{display:grid; grid-template-columns:1fr; gap:34px}
+@media(min-width:820px){ .due{grid-template-columns:1.1fr .9fr; gap:56px} }
+
+.dove p{margin:0 0 14px; color:var(--ink-2)}
+.dove .grande{font-family:"Syne",sans-serif; font-size:21px; font-weight:600; color:var(--ink); margin-bottom:6px}
+
+.voce-cliente{background:var(--fux-b); border-radius:3px; padding:36px 30px}
+.voce-cliente p{margin:0; font-family:"Syne",sans-serif; font-size:clamp(20px,3vw,27px);
+  font-weight:600; line-height:1.3; color:var(--ink); letter-spacing:-.02em}
+.voce-cliente .chi{margin-top:16px; font-family:"Karla",sans-serif; font-size:14px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--fux); font-weight:700}
+
+footer{background:var(--ink); color:var(--ground); padding:52px 0 42px; margin-top:20px}
+footer .centro{display:flex; flex-wrap:wrap; gap:26px; justify-content:space-between; align-items:flex-end}
+footer .nome{font-family:"Syne",sans-serif; font-weight:800; font-size:26px; letter-spacing:-.02em}
+footer .righe{font-size:15px; opacity:.75; line-height:1.7}
+footer b{color:var(--fux)}
+</style>
+</head>
+<body>
+
+
+<div class="avviso">Sito di esempio &middot; Salone inventato</div>
+
+<header class="hero">
+  <div class="centro">
+    <div class="marchio">Parrucchiere &middot; Brescia</div>
+    <h1>Salone<br><em>Marta</em></h1>
+    <p class="occhiello">Taglio, colore e piega nel cuore di Brescia. Dal 2009, sempre su appuntamento.</p>
+    <div class="bottoni">
+      <a class="bt pieno" href="#prenota">Prenota su WhatsApp</a>
+      <a class="bt vuoto" href="#listino">Vedi i prezzi</a>
+    </div>
+  </div>
+</header>
+
+<div class="fascia">
+  <div class="centro">
+    <div class="f-cella"><div class="n">17</div><div class="e">anni in centro</div></div>
+    <div class="f-cella"><div class="n">4</div><div class="e">poltrone</div></div>
+    <div class="f-cella"><div class="n">30&prime;</div><div class="e">taglio veloce</div></div>
+  </div>
+</div>
+
+<section class="blocco" id="listino">
+  <div class="centro">
+    <div class="titolo"><h2>Listino</h2><span>Prezzi chiari, nessuna sorpresa</span></div>
+    <div class="listino">
+      <div class="voce"><span class="v-n">Taglio donna</span><span class="v-p"></span><span class="v-e">28 &euro;</span></div>
+      <div class="voce"><span class="v-n">Taglio uomo</span><span class="v-p"></span><span class="v-e">18 &euro;</span></div>
+      <div class="voce"><span class="v-n">Piega</span><span class="v-p"></span><span class="v-e">20 &euro;</span></div>
+      <div class="voce"><span class="v-n">Colore completo</span><span class="v-p"></span><span class="v-e">45 &euro;</span></div>
+      <div class="voce"><span class="v-n">Colpi di sole</span><span class="v-p"></span><span class="v-e">55 &euro;</span></div>
+      <div class="voce"><span class="v-n">Ricostruzione</span><span class="v-p"></span><span class="v-e">35 &euro;</span></div>
+      <div class="voce"><span class="v-n">Barba</span><span class="v-p"></span><span class="v-e">12 &euro;</span></div>
+      <div class="voce"><span class="v-n">Taglio bambino</span><span class="v-p"></span><span class="v-e">14 &euro;</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="blocco" style="padding-top:0">
+  <div class="centro due">
+    <div class="dove" id="prenota">
+      <div class="titolo"><h2>Dove siamo</h2></div>
+      <p class="grande">Via Trieste 14, Brescia</p>
+      <p>A due passi da Piazza della Loggia. Parcheggio a 200 metri.</p>
+      <p class="grande">030 1234567</p>
+      <p>Si prenota anche scrivendo su WhatsApp. Rispondiamo in giornata.</p>
+      <div class="bottoni"><a class="bt pieno" href="#prenota">Scrivi su WhatsApp</a></div>
+    </div>
+    <div>
+      <div class="titolo"><h2>Orari</h2></div>
+      <div class="orari">
+        <div class="o-riga chiuso"><span class="g">Luned&igrave;</span><span class="h">chiuso</span></div>
+        <div class="o-riga"><span class="g">Marted&igrave;</span><span class="h">09:00 &ndash; 18:30</span></div>
+        <div class="o-riga"><span class="g">Mercoled&igrave;</span><span class="h">09:00 &ndash; 18:30</span></div>
+        <div class="o-riga"><span class="g">Gioved&igrave;</span><span class="h">09:00 &ndash; 20:00</span></div>
+        <div class="o-riga"><span class="g">Venerd&igrave;</span><span class="h">09:00 &ndash; 20:00</span></div>
+        <div class="o-riga"><span class="g">Sabato</span><span class="h">08:30 &ndash; 17:00</span></div>
+        <div class="o-riga chiuso"><span class="g">Domenica</span><span class="h">chiuso</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blocco" style="padding-top:0">
+  <div class="centro">
+    <div class="voce-cliente">
+      <p>&ldquo;Vado da Marta da nove anni. Non ho mai dovuto spiegare due volte cosa volevo.&rdquo;</p>
+      <div class="chi">Giulia &mdash; cliente</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="centro">
+    <div>
+      <div class="nome">Salone Marta</div>
+      <div class="righe">Via Trieste 14, Brescia &middot; 030 1234567<br>Marted&igrave; &ndash; Sabato &middot; su appuntamento</div>
+    </div>
+    <div class="righe">Sito di esempio realizzato da <b>John</b></div>
+  </div>
+</footer>
+
+</body>
+</html>
