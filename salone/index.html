@@ -7,125 +7,192 @@
 <title>Salone Marta</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Karla:wght@400;500;700&display=swap">
 <style>
 :root{
-  --ground:#F2F1F5; --card:#FFFFFF; --sunk:#E7E5EC;
-  --ink:#161420; --ink-2:#5C5669; --ink-3:#8A849A;
-  --linea:#DEDAE6; --linea-forte:#C3BDD0;
-  --fux:#B62472; --fux-b:#FBE6F1; --su-fux:#FFFFFF;
+  --ground:#EFEDE9; --card:#FFFFFF; --sunk:#E3E0DA;
+  --ink:#14120F; --ink-2:#57534B; --ink-3:#8A8478;
+  --linea:#DCD8D1; --linea-forte:#BEB8AD;
+  --lime:#C8F031; --su-lime:#14120F;
+  --rosa:#FF5CA8; --rosa-b:#FFE3F0;
+  --bordo:20px;
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --ground:#0F0D14; --card:#191723; --sunk:#141220;
-  --ink:#F1EEF6; --ink-2:#A49DB3; --ink-3:#7C7590;
-  --linea:#2A2636; --linea-forte:#3D3750;
-  --fux:#F274B2; --fux-b:#2B1322; --su-fux:#1A0A12;
+  --ground:#0D0C0A; --card:#171613; --sunk:#121110;
+  --ink:#F2F0EB; --ink-2:#A8A296; --ink-3:#7D776B;
+  --linea:#272521; --linea-forte:#3A3730;
+  --lime:#D6FF4A; --su-lime:#14120F;
+  --rosa:#FF7ABA; --rosa-b:#2C1220;
 }}
 :root[data-theme="dark"]{
-  --ground:#0F0D14; --card:#191723; --sunk:#141220;
-  --ink:#F1EEF6; --ink-2:#A49DB3; --ink-3:#7C7590;
-  --linea:#2A2636; --linea-forte:#3D3750;
-  --fux:#F274B2; --fux-b:#2B1322; --su-fux:#1A0A12;
+  --ground:#0D0C0A; --card:#171613; --sunk:#121110;
+  --ink:#F2F0EB; --ink-2:#A8A296; --ink-3:#7D776B;
+  --linea:#272521; --linea-forte:#3A3730;
+  --lime:#D6FF4A; --su-lime:#14120F;
+  --rosa:#FF7ABA; --rosa-b:#2C1220;
 }
 *{box-sizing:border-box}
 body{margin:0; background:var(--ground); color:var(--ink);
-  font-family:"Karla",system-ui,-apple-system,sans-serif; font-size:17px; line-height:1.55;
-  -webkit-font-smoothing:antialiased}
-h1,h2,h3{margin:0; font-family:"Syne","Karla",sans-serif; letter-spacing:-.03em; text-wrap:balance}
+  font-family:"Karla",system-ui,-apple-system,sans-serif; font-size:17px; line-height:1.5;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden}
+h1,h2,h3{margin:0; font-family:"Bricolage Grotesque","Karla",sans-serif;
+  letter-spacing:-.035em; text-wrap:balance; font-weight:800}
 a{color:inherit}
-.centro{max-width:960px; margin:0 auto; padding:0 22px}
+.centro{max-width:1020px; margin:0 auto; padding:0 20px}
 
-.avviso{background:var(--ink); color:var(--ground); font-size:12.5px; letter-spacing:.14em;
-  text-transform:uppercase; text-align:center; padding:9px 16px; font-weight:700}
+.avviso{background:var(--ink); color:var(--ground); font-size:11.5px; letter-spacing:.16em;
+  text-transform:uppercase; text-align:center; padding:10px 16px; font-weight:700}
 
-header.hero{padding:64px 0 56px; border-bottom:1px solid var(--linea)}
-.marchio{font-family:"Syne",sans-serif; font-weight:800; font-size:14px; letter-spacing:.3em;
-  text-transform:uppercase; color:var(--fux); margin-bottom:26px}
-h1{font-size:clamp(46px,12vw,104px); font-weight:800; line-height:.92}
-h1 em{font-style:normal; color:var(--fux)}
-.occhiello{margin:22px 0 0; font-size:clamp(18px,2.4vw,22px); color:var(--ink-2); max-width:34ch; line-height:1.4}
-.bottoni{display:flex; flex-wrap:wrap; gap:12px; margin-top:34px}
-.bt{display:inline-block; text-decoration:none; font-family:"Syne",sans-serif; font-weight:600;
-  font-size:17px; padding:15px 26px; border-radius:2px; transition:transform .15s ease}
-.bt.pieno{background:var(--fux); color:var(--su-fux)}
-.bt.vuoto{border:1.5px solid var(--linea-forte); color:var(--ink)}
+/* ---------- apertura ---------- */
+.hero{padding:34px 0 30px}
+.blocco-nome{background:var(--ink); border-radius:var(--bordo); padding:38px 28px 30px; color:var(--ground)}
+.eyebrow{display:inline-block; background:var(--lime); color:var(--su-lime);
+  font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:12px; letter-spacing:.18em;
+  text-transform:uppercase; padding:7px 14px; border-radius:99px; margin-bottom:24px}
+h1{font-size:clamp(52px,15vw,132px); line-height:.86; color:var(--ground)}
+h1 em{font-style:normal; color:var(--lime)}
+.blocco-nome p{margin:24px 0 0; font-size:clamp(17px,2.2vw,21px); color:var(--ground);
+  opacity:.75; max-width:32ch; line-height:1.4}
+
+.bottoni{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px}
+.bt{display:inline-block; text-decoration:none; font-family:"Bricolage Grotesque",sans-serif;
+  font-weight:700; font-size:16.5px; padding:15px 28px; border-radius:99px;
+  transition:transform .14s ease}
+.bt.lime{background:var(--lime); color:var(--su-lime)}
+.bt.filo{border:1.5px solid var(--ground); color:var(--ground)}
+.bt.scuro{background:var(--ink); color:var(--ground)}
 .bt:hover{transform:translateY(-2px)}
-.bt:focus-visible{outline:3px solid var(--fux); outline-offset:3px}
-@media (prefers-reduced-motion: reduce){ .bt{transition:none} .bt:hover{transform:none} }
+.bt:focus-visible{outline:3px solid var(--rosa); outline-offset:3px}
+@media (prefers-reduced-motion: reduce){ .bt{transition:none} .bt:hover{transform:none} .nastro-scorre{animation:none} }
 
-.fascia{background:var(--ink); color:var(--ground)}
-.fascia .centro{display:grid; grid-template-columns:repeat(3,1fr); gap:2px}
-.f-cella{padding:30px 10px; text-align:center}
-.f-cella .n{font-family:"Syne",sans-serif; font-size:38px; font-weight:800; line-height:1; color:var(--fux)}
-.f-cella .e{font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; margin-top:9px; opacity:.72}
+/* ---------- nastro ---------- */
+.nastro{background:var(--lime); color:var(--su-lime); overflow:hidden; padding:13px 0;
+  border-top:2px solid var(--ink); border-bottom:2px solid var(--ink)}
+.nastro-scorre{display:inline-flex; gap:34px; white-space:nowrap;
+  font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:15px;
+  letter-spacing:.14em; text-transform:uppercase; animation:scorri 22s linear infinite}
+.nastro-scorre span{display:inline-block}
+@keyframes scorri{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-section.blocco{padding:62px 0}
-.titolo{display:flex; align-items:baseline; gap:16px; margin-bottom:34px; flex-wrap:wrap}
-h2{font-size:clamp(30px,5vw,44px); font-weight:800}
-.titolo span{font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--fux); font-weight:700}
+/* ---------- sezioni ---------- */
+section.blocco{padding:56px 0}
+.titolo{display:flex; align-items:baseline; gap:14px; margin-bottom:28px; flex-wrap:wrap}
+h2{font-size:clamp(30px,6vw,52px)}
+.titolo .tag{font-size:12px; letter-spacing:.16em; text-transform:uppercase; font-weight:700;
+  color:var(--rosa); background:var(--rosa-b); padding:6px 12px; border-radius:99px}
 
+/* listino */
 .listino{display:grid; grid-template-columns:1fr; gap:0}
-@media(min-width:760px){ .listino{grid-template-columns:1fr 1fr; column-gap:56px} }
-.voce{display:flex; align-items:baseline; gap:12px; padding:15px 0; border-bottom:1px solid var(--linea)}
+@media(min-width:760px){ .listino{grid-template-columns:1fr 1fr; column-gap:54px} }
+.voce{display:flex; align-items:baseline; gap:12px; padding:16px 0; border-bottom:1px solid var(--linea)}
 .voce .v-n{font-weight:500}
-.voce .v-p{flex:1; border-bottom:1px dotted var(--linea-forte); transform:translateY(-4px)}
-.voce .v-e{font-family:"Syne",sans-serif; font-weight:600; font-variant-numeric:tabular-nums; white-space:nowrap}
+.voce .v-p{flex:1; border-bottom:1.5px dotted var(--linea-forte); transform:translateY(-4px)}
+.voce .v-e{font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:19px;
+  font-variant-numeric:tabular-nums; white-space:nowrap}
 
-.orari{background:var(--card); border:1px solid var(--linea); border-radius:3px; overflow:hidden}
-.o-riga{display:flex; justify-content:space-between; gap:18px; padding:14px 22px; border-bottom:1px solid var(--linea)}
+/* servizi */
+.servizi{display:grid; grid-template-columns:1fr; gap:14px}
+@media(min-width:760px){ .servizi{grid-template-columns:repeat(3,1fr)} }
+.serv{background:var(--card); border:1px solid var(--linea); border-radius:var(--bordo); padding:26px 24px}
+.serv .q{display:inline-block; background:var(--ink); color:var(--ground);
+  font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:11.5px; letter-spacing:.16em;
+  text-transform:uppercase; padding:6px 12px; border-radius:99px; margin-bottom:16px}
+.serv h3{font-size:21px; margin-bottom:8px; letter-spacing:-.02em}
+.serv p{margin:0; color:var(--ink-2); font-size:15.5px}
+
+/* galleria */
+.galleria{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+@media(min-width:760px){ .galleria{grid-template-columns:repeat(4,1fr)} }
+.foto{aspect-ratio:4/5; background:var(--sunk); border:1.5px dashed var(--linea-forte);
+  border-radius:var(--bordo); display:flex; align-items:center; justify-content:center; padding:16px}
+.foto span{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3);
+  text-align:center; font-weight:700; line-height:1.6}
+
+/* orari + dove */
+.due{display:grid; grid-template-columns:1fr; gap:30px}
+@media(min-width:840px){ .due{grid-template-columns:1fr 1fr; gap:50px} }
+.orari{background:var(--card); border:1px solid var(--linea); border-radius:var(--bordo); overflow:hidden}
+.o-riga{display:flex; justify-content:space-between; gap:18px; padding:15px 22px; border-bottom:1px solid var(--linea)}
 .o-riga:last-child{border-bottom:none}
-.o-riga.chiuso{color:var(--ink-3)}
 .o-riga .g{font-weight:500}
 .o-riga .h{font-variant-numeric:tabular-nums; color:var(--ink-2)}
-.o-riga.chiuso .h{color:var(--ink-3)}
+.o-riga.chiuso{color:var(--ink-3)} .o-riga.chiuso .h{color:var(--ink-3)}
+.dove p{margin:0 0 16px; color:var(--ink-2)}
+.dove .grande{font-family:"Bricolage Grotesque",sans-serif; font-size:23px; font-weight:700;
+  color:var(--ink); margin-bottom:4px; letter-spacing:-.02em}
 
-.due{display:grid; grid-template-columns:1fr; gap:34px}
-@media(min-width:820px){ .due{grid-template-columns:1.1fr .9fr; gap:56px} }
+/* citazione */
+.dice{background:var(--rosa); border-radius:var(--bordo); padding:40px 30px}
+.dice p{margin:0; font-family:"Bricolage Grotesque",sans-serif; font-size:clamp(22px,3.6vw,34px);
+  font-weight:800; line-height:1.18; color:#14120F; letter-spacing:-.03em}
+.dice .chi{margin-top:18px; font-family:"Karla",sans-serif; font-size:13px; letter-spacing:.14em;
+  text-transform:uppercase; color:#14120F; opacity:.7; font-weight:700}
 
-.dove p{margin:0 0 14px; color:var(--ink-2)}
-.dove .grande{font-family:"Syne",sans-serif; font-size:21px; font-weight:600; color:var(--ink); margin-bottom:6px}
+footer{background:var(--ink); color:var(--ground); padding:50px 0 130px; margin-top:14px}
+footer .nome{font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:30px; letter-spacing:-.03em}
+footer p{margin:14px 0 0; font-size:15px; opacity:.7; line-height:1.7}
 
-.voce-cliente{background:var(--fux-b); border-radius:3px; padding:36px 30px}
-.voce-cliente p{margin:0; font-family:"Syne",sans-serif; font-size:clamp(20px,3vw,27px);
-  font-weight:600; line-height:1.3; color:var(--ink); letter-spacing:-.02em}
-.voce-cliente .chi{margin-top:16px; font-family:"Karla",sans-serif; font-size:14px;
-  letter-spacing:.1em; text-transform:uppercase; color:var(--fux); font-weight:700}
-
-footer{background:var(--ink); color:var(--ground); padding:52px 0 42px; margin-top:20px}
-footer .centro{display:flex; flex-wrap:wrap; gap:26px; justify-content:space-between; align-items:flex-end}
-footer .nome{font-family:"Syne",sans-serif; font-weight:800; font-size:26px; letter-spacing:-.02em}
-footer .righe{font-size:15px; opacity:.75; line-height:1.7}
-footer b{color:var(--fux)}
+/* barra fissa in basso */
+.barra-giu{position:fixed; left:0; right:0; bottom:0; z-index:9; padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:var(--ground); border-top:1.5px solid var(--linea-forte);
+  display:flex; gap:12px; align-items:center; justify-content:space-between}
+.barra-giu .q{font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:15px; line-height:1.25}
+.barra-giu .q small{display:block; font-family:"Karla",sans-serif; font-weight:400; font-size:13px; color:var(--ink-2)}
+.barra-giu .bt{padding:13px 22px; font-size:15.5px}
 </style>
 </head>
 <body>
 
 
-<div class="avviso">Sito di esempio &middot; Salone inventato</div>
+<div class="avviso">Sito di esempio &middot; questo salone non esiste</div>
 
-<header class="hero">
+<div class="hero">
   <div class="centro">
-    <div class="marchio">Parrucchiere &middot; Brescia</div>
-    <h1>Salone<br><em>Marta</em></h1>
-    <p class="occhiello">Taglio, colore e piega nel cuore di Brescia. Dal 2009, sempre su appuntamento.</p>
-    <div class="bottoni">
-      <a class="bt pieno" href="#prenota">Prenota su WhatsApp</a>
-      <a class="bt vuoto" href="#listino">Vedi i prezzi</a>
+    <div class="blocco-nome">
+      <div class="eyebrow">Parrucchiere &middot; Brescia</div>
+      <h1>Salone<br><em>Marta</em></h1>
+      <p>Taglio, colore e piega in centro a Brescia. Dal 2009, sempre su appuntamento.</p>
+      <div class="bottoni">
+        <a class="bt lime" href="#prenota">Prenota su WhatsApp</a>
+        <a class="bt filo" href="#listino">Vedi i prezzi</a>
+      </div>
     </div>
-  </div>
-</header>
-
-<div class="fascia">
-  <div class="centro">
-    <div class="f-cella"><div class="n">17</div><div class="e">anni in centro</div></div>
-    <div class="f-cella"><div class="n">4</div><div class="e">poltrone</div></div>
-    <div class="f-cella"><div class="n">30&prime;</div><div class="e">taglio veloce</div></div>
   </div>
 </div>
 
-<section class="blocco" id="listino">
+<div class="nastro">
+  <div class="nastro-scorre">
+    <span>Taglio &nbsp;&bull;&nbsp; Colore &nbsp;&bull;&nbsp; Piega &nbsp;&bull;&nbsp; Colpi di sole &nbsp;&bull;&nbsp; Barba &nbsp;&bull;&nbsp; Ricostruzione &nbsp;&bull;&nbsp;</span>
+    <span>Taglio &nbsp;&bull;&nbsp; Colore &nbsp;&bull;&nbsp; Piega &nbsp;&bull;&nbsp; Colpi di sole &nbsp;&bull;&nbsp; Barba &nbsp;&bull;&nbsp; Ricostruzione &nbsp;&bull;&nbsp;</span>
+  </div>
+</div>
+
+<section class="blocco">
   <div class="centro">
-    <div class="titolo"><h2>Listino</h2><span>Prezzi chiari, nessuna sorpresa</span></div>
+    <div class="titolo"><h2>Cosa facciamo</h2></div>
+    <div class="servizi">
+      <div class="serv">
+        <div class="q">Taglio</div>
+        <h3>Su misura, non a stampo</h3>
+        <p>Si parte da come porti i capelli tutti i giorni, non da una foto. La consulenza è sempre compresa.</p>
+      </div>
+      <div class="serv">
+        <div class="q">Colore</div>
+        <h3>Anche solo la ricrescita</h3>
+        <p>Tinta, colpi di sole, riflessante. Se serve solo ritoccare, paghi solo quello.</p>
+      </div>
+      <div class="serv">
+        <div class="q">Cura</div>
+        <h3>Capelli rovinati</h3>
+        <p>Ricostruzione per capelli sfibrati da tinte, piastra o mare. Si vede dalla prima volta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blocco" style="padding-top:0" id="listino">
+  <div class="centro">
+    <div class="titolo"><h2>Listino</h2><span class="tag">Nessuna sorpresa</span></div>
     <div class="listino">
       <div class="voce"><span class="v-n">Taglio donna</span><span class="v-p"></span><span class="v-e">28 &euro;</span></div>
       <div class="voce"><span class="v-n">Taglio uomo</span><span class="v-p"></span><span class="v-e">18 &euro;</span></div>
@@ -140,6 +207,27 @@ footer b{color:var(--fux)}
 </section>
 
 <section class="blocco" style="padding-top:0">
+  <div class="centro">
+    <div class="titolo"><h2>Il salone</h2><span class="tag">Qui vanno le vostre foto</span></div>
+    <div class="galleria">
+      <div class="foto"><span>Foto<br>del locale</span></div>
+      <div class="foto"><span>Un taglio<br>fatto da voi</span></div>
+      <div class="foto"><span>La<br>vetrina</span></div>
+      <div class="foto"><span>Voi<br>al lavoro</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="blocco" style="padding-top:0">
+  <div class="centro">
+    <div class="dice">
+      <p>&ldquo;Vado da Marta da nove anni. Non ho mai dovuto spiegare due volte cosa volevo.&rdquo;</p>
+      <div class="chi">Giulia &mdash; cliente</div>
+    </div>
+  </div>
+</section>
+
+<section class="blocco" style="padding-top:0">
   <div class="centro due">
     <div class="dove" id="prenota">
       <div class="titolo"><h2>Dove siamo</h2></div>
@@ -147,7 +235,7 @@ footer b{color:var(--fux)}
       <p>A due passi da Piazza della Loggia. Parcheggio a 200 metri.</p>
       <p class="grande">030 1234567</p>
       <p>Si prenota anche scrivendo su WhatsApp. Rispondiamo in giornata.</p>
-      <div class="bottoni"><a class="bt pieno" href="#prenota">Scrivi su WhatsApp</a></div>
+      <div class="bottoni"><a class="bt scuro" href="#prenota">Scrivi su WhatsApp</a></div>
     </div>
     <div>
       <div class="titolo"><h2>Orari</h2></div>
@@ -164,24 +252,17 @@ footer b{color:var(--fux)}
   </div>
 </section>
 
-<section class="blocco" style="padding-top:0">
-  <div class="centro">
-    <div class="voce-cliente">
-      <p>&ldquo;Vado da Marta da nove anni. Non ho mai dovuto spiegare due volte cosa volevo.&rdquo;</p>
-      <div class="chi">Giulia &mdash; cliente</div>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="centro">
-    <div>
-      <div class="nome">Salone Marta</div>
-      <div class="righe">Via Trieste 14, Brescia &middot; 030 1234567<br>Marted&igrave; &ndash; Sabato &middot; su appuntamento</div>
-    </div>
-    <div class="righe">Sito di esempio realizzato da <b>John</b></div>
+    <div class="nome">Salone Marta</div>
+    <p>Via Trieste 14, Brescia &middot; 030 1234567<br>Marted&igrave; &ndash; Sabato &middot; su appuntamento</p>
   </div>
 </footer>
+
+<div class="barra-giu">
+  <div class="q">Taglio da 18 &euro;<br><small>Marted&igrave; &ndash; Sabato</small></div>
+  <a class="bt scuro" href="#prenota">Prenota</a>
+</div>
 
 </body>
 </html>

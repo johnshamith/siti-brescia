@@ -3,120 +3,213 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Siti web per negozi &middot; Brescia</title>
+<title>Siti web per negozi · Brescia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Karla:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Karla:wght@400;500;700&display=swap">
 <style>
+
 :root{
-  --ground:#F1F0F5; --card:#FFFFFF; --sunk:#E5E3EE;
-  --ink:#131120; --ink-2:#565169; --ink-3:#847EA0;
-  --linea:#DCD9E8; --linea-forte:#BFB9D4;
-  --viola:#4B25C4; --viola-b:#EAE4FB; --su-viola:#FFFFFF;
+  --ground:#EFEDE9; --card:#FFFFFF; --sunk:#E3E0DA;
+  --ink:#14120F; --ink-2:#57534B; --ink-3:#8A8478;
+  --linea:#DCD8D1; --linea-forte:#BEB8AD;
+  --lime:#4D6BFF; --su-lime:#FFFFFF;
+  --rosa:#00C2A8; --rosa-b:#D7F4EF;
+  --bordo:20px;
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --ground:#0C0B14; --card:#171525; --sunk:#12101E;
-  --ink:#EFEDF7; --ink-2:#A29CBB; --ink-3:#7B7599;
-  --linea:#272338; --linea-forte:#3A3452;
-  --viola:#A98CFF; --viola-b:#1F1738; --su-viola:#12092A;
+  --ground:#0D0C0A; --card:#171613; --sunk:#121110;
+  --ink:#F2F0EB; --ink-2:#A8A296; --ink-3:#7D776B;
+  --linea:#272521; --linea-forte:#3A3730;
+  --lime:#8AA0FF; --su-lime:#FFFFFF;
+  --rosa:#3FD6BE; --rosa-b:#0E2B27;
 }}
 :root[data-theme="dark"]{
-  --ground:#0C0B14; --card:#171525; --sunk:#12101E;
-  --ink:#EFEDF7; --ink-2:#A29CBB; --ink-3:#7B7599;
-  --linea:#272338; --linea-forte:#3A3452;
-  --viola:#A98CFF; --viola-b:#1F1738; --su-viola:#12092A;
+  --ground:#0D0C0A; --card:#171613; --sunk:#121110;
+  --ink:#F2F0EB; --ink-2:#A8A296; --ink-3:#7D776B;
+  --linea:#272521; --linea-forte:#3A3730;
+  --lime:#8AA0FF; --su-lime:#FFFFFF;
+  --rosa:#3FD6BE; --rosa-b:#0E2B27;
 }
 *{box-sizing:border-box}
 body{margin:0; background:var(--ground); color:var(--ink);
-  font-family:"Karla",system-ui,-apple-system,sans-serif; font-size:17px; line-height:1.55;
-  -webkit-font-smoothing:antialiased}
-h1,h2,h3{margin:0; font-family:"Syne","Karla",sans-serif; letter-spacing:-.03em; text-wrap:balance}
-.centro{max-width:980px; margin:0 auto; padding:0 22px}
+  font-family:"Karla",system-ui,-apple-system,sans-serif; font-size:17px; line-height:1.5;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden}
+h1,h2,h3{margin:0; font-family:"Bricolage Grotesque","Karla",sans-serif;
+  letter-spacing:-.035em; text-wrap:balance; font-weight:800}
+a{color:inherit}
+.centro{max-width:1020px; margin:0 auto; padding:0 20px}
 
-/* ---- apertura ---- */
-header.hero{padding:70px 0 60px}
-.occhio{font-family:"Syne",sans-serif; font-weight:800; font-size:13px; letter-spacing:.3em;
-  text-transform:uppercase; color:var(--viola); margin-bottom:26px}
-h1{font-size:clamp(44px,11.5vw,96px); font-weight:800; line-height:.94}
-h1 em{font-style:normal; color:var(--viola)}
-header p.occhiello{margin:26px 0 0; font-size:clamp(18px,2.3vw,22px); color:var(--ink-2); max-width:38ch; line-height:1.42}
-.bottoni{display:flex; flex-wrap:wrap; gap:12px; margin-top:36px}
-.bt{display:inline-block; text-decoration:none; font-family:"Syne",sans-serif; font-weight:600;
-  font-size:17px; padding:15px 28px; border-radius:2px; transition:transform .15s ease}
-.bt.pieno{background:var(--viola); color:var(--su-viola)}
-.bt.vuoto{border:1.5px solid var(--linea-forte); color:var(--ink)}
+.avviso{background:var(--ink); color:var(--ground); font-size:11.5px; letter-spacing:.16em;
+  text-transform:uppercase; text-align:center; padding:10px 16px; font-weight:700}
+
+/* ---------- apertura ---------- */
+.hero{padding:34px 0 30px}
+.blocco-nome{background:var(--ink); border-radius:var(--bordo); padding:38px 28px 30px; color:var(--ground)}
+.eyebrow{display:inline-block; background:var(--lime); color:var(--su-lime);
+  font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:12px; letter-spacing:.18em;
+  text-transform:uppercase; padding:7px 14px; border-radius:99px; margin-bottom:24px}
+h1{font-size:clamp(52px,15vw,132px); line-height:.86; color:var(--ground)}
+h1 em{font-style:normal; color:var(--lime)}
+.blocco-nome p{margin:24px 0 0; font-size:clamp(17px,2.2vw,21px); color:var(--ground);
+  opacity:.75; max-width:32ch; line-height:1.4}
+
+.bottoni{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px}
+.bt{display:inline-block; text-decoration:none; font-family:"Bricolage Grotesque",sans-serif;
+  font-weight:700; font-size:16.5px; padding:15px 28px; border-radius:99px;
+  transition:transform .14s ease}
+.bt.lime{background:var(--lime); color:var(--su-lime)}
+.bt.filo{border:1.5px solid var(--ground); color:var(--ground)}
+.bt.scuro{background:var(--ink); color:var(--ground)}
 .bt:hover{transform:translateY(-2px)}
-.bt:focus-visible{outline:3px solid var(--viola); outline-offset:3px}
-@media (prefers-reduced-motion: reduce){ .bt,a.esempio{transition:none} .bt:hover{transform:none} }
+.bt:focus-visible{outline:3px solid var(--rosa); outline-offset:3px}
+@media (prefers-reduced-motion: reduce){ .bt{transition:none} .bt:hover{transform:none} .nastro-scorre{animation:none} }
 
-/* ---- fascia numeri ---- */
-.fascia{background:var(--ink)}
-.fascia .centro{display:grid; grid-template-columns:repeat(3,1fr); gap:2px}
-.f-cella{padding:32px 10px; text-align:center}
-.f-cella .n{font-family:"Syne",sans-serif; font-size:clamp(28px,5vw,42px); font-weight:800; line-height:1; color:var(--viola)}
-.f-cella .e{font-size:12px; letter-spacing:.14em; text-transform:uppercase; margin-top:10px; color:var(--ground); opacity:.7}
+/* ---------- nastro ---------- */
+.nastro{background:var(--lime); color:var(--su-lime); overflow:hidden; padding:13px 0;
+  border-top:2px solid var(--ink); border-bottom:2px solid var(--ink)}
+.nastro-scorre{display:inline-flex; gap:34px; white-space:nowrap;
+  font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:15px;
+  letter-spacing:.14em; text-transform:uppercase; animation:scorri 22s linear infinite}
+.nastro-scorre span{display:inline-block}
+@keyframes scorri{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-section{padding:64px 0}
-.titolo{display:flex; align-items:baseline; gap:16px; margin-bottom:32px; flex-wrap:wrap}
-h2{font-size:clamp(28px,5vw,44px); font-weight:800}
-.titolo span{font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--viola); font-weight:700}
+/* ---------- sezioni ---------- */
+section.blocco{padding:56px 0}
+.titolo{display:flex; align-items:baseline; gap:14px; margin-bottom:28px; flex-wrap:wrap}
+h2{font-size:clamp(30px,6vw,52px)}
+.titolo .tag{font-size:12px; letter-spacing:.16em; text-transform:uppercase; font-weight:700;
+  color:var(--rosa); background:var(--rosa-b); padding:6px 12px; border-radius:99px}
 
-/* ---- esempio ---- */
+/* listino */
+.listino{display:grid; grid-template-columns:1fr; gap:0}
+@media(min-width:760px){ .listino{grid-template-columns:1fr 1fr; column-gap:54px} }
+.voce{display:flex; align-items:baseline; gap:12px; padding:16px 0; border-bottom:1px solid var(--linea)}
+.voce .v-n{font-weight:500}
+.voce .v-p{flex:1; border-bottom:1.5px dotted var(--linea-forte); transform:translateY(-4px)}
+.voce .v-e{font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:19px;
+  font-variant-numeric:tabular-nums; white-space:nowrap}
+
+/* servizi */
+.servizi{display:grid; grid-template-columns:1fr; gap:14px}
+@media(min-width:760px){ .servizi{grid-template-columns:repeat(3,1fr)} }
+.serv{background:var(--card); border:1px solid var(--linea); border-radius:var(--bordo); padding:26px 24px}
+.serv .q{display:inline-block; background:var(--ink); color:var(--ground);
+  font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:11.5px; letter-spacing:.16em;
+  text-transform:uppercase; padding:6px 12px; border-radius:99px; margin-bottom:16px}
+.serv h3{font-size:21px; margin-bottom:8px; letter-spacing:-.02em}
+.serv p{margin:0; color:var(--ink-2); font-size:15.5px}
+
+/* galleria */
+.galleria{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+@media(min-width:760px){ .galleria{grid-template-columns:repeat(4,1fr)} }
+.foto{aspect-ratio:4/5; background:var(--sunk); border:1.5px dashed var(--linea-forte);
+  border-radius:var(--bordo); display:flex; align-items:center; justify-content:center; padding:16px}
+.foto span{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3);
+  text-align:center; font-weight:700; line-height:1.6}
+
+/* orari + dove */
+.due{display:grid; grid-template-columns:1fr; gap:30px}
+@media(min-width:840px){ .due{grid-template-columns:1fr 1fr; gap:50px} }
+.orari{background:var(--card); border:1px solid var(--linea); border-radius:var(--bordo); overflow:hidden}
+.o-riga{display:flex; justify-content:space-between; gap:18px; padding:15px 22px; border-bottom:1px solid var(--linea)}
+.o-riga:last-child{border-bottom:none}
+.o-riga .g{font-weight:500}
+.o-riga .h{font-variant-numeric:tabular-nums; color:var(--ink-2)}
+.o-riga.chiuso{color:var(--ink-3)} .o-riga.chiuso .h{color:var(--ink-3)}
+.dove p{margin:0 0 16px; color:var(--ink-2)}
+.dove .grande{font-family:"Bricolage Grotesque",sans-serif; font-size:23px; font-weight:700;
+  color:var(--ink); margin-bottom:4px; letter-spacing:-.02em}
+
+/* citazione */
+.dice{background:var(--rosa); border-radius:var(--bordo); padding:40px 30px}
+.dice p{margin:0; font-family:"Bricolage Grotesque",sans-serif; font-size:clamp(22px,3.6vw,34px);
+  font-weight:800; line-height:1.18; color:#14120F; letter-spacing:-.03em}
+.dice .chi{margin-top:18px; font-family:"Karla",sans-serif; font-size:13px; letter-spacing:.14em;
+  text-transform:uppercase; color:#14120F; opacity:.7; font-weight:700}
+
+footer{background:var(--ink); color:var(--ground); padding:50px 0 130px; margin-top:14px}
+footer .nome{font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:30px; letter-spacing:-.03em}
+footer p{margin:14px 0 0; font-size:15px; opacity:.7; line-height:1.7}
+
+/* barra fissa in basso */
+.barra-giu{position:fixed; left:0; right:0; bottom:0; z-index:9; padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:var(--ground); border-top:1.5px solid var(--linea-forte);
+  display:flex; gap:12px; align-items:center; justify-content:space-between}
+.barra-giu .q{font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:15px; line-height:1.25}
+.barra-giu .q small{display:block; font-family:"Karla",sans-serif; font-weight:400; font-size:13px; color:var(--ink-2)}
+.barra-giu .bt{padding:13px 22px; font-size:15.5px}
+
+.numeri{display:grid; grid-template-columns:1fr; gap:12px}
+@media(min-width:700px){ .numeri{grid-template-columns:repeat(3,1fr)} }
+.n-cella{background:var(--card); border:1px solid var(--linea); border-radius:var(--bordo); padding:26px 24px}
+.n-cella .n{font-family:"Bricolage Grotesque",sans-serif; font-size:clamp(30px,5vw,42px); font-weight:800; line-height:1; color:var(--lime); letter-spacing:-.03em}
+.n-cella .e{font-size:12px; letter-spacing:.14em; text-transform:uppercase; margin-top:10px; color:var(--ink-3); font-weight:700}
+
 a.esempio{display:block; text-decoration:none; color:inherit; background:var(--card);
-  border:1px solid var(--linea); border-radius:3px; overflow:hidden; transition:border-color .15s ease}
-a.esempio:hover{border-color:var(--viola)}
-a.esempio:focus-visible{outline:3px solid var(--viola); outline-offset:3px}
-.anteprima{background:var(--viola-b); padding:40px 26px; text-align:center}
-.anteprima .finto{font-family:"Syne",sans-serif; font-weight:800; font-size:clamp(30px,7vw,50px);
-  line-height:.95; color:var(--viola); letter-spacing:-.03em}
-.anteprima .sotto-finto{margin-top:10px; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:var(--viola); opacity:.8; font-weight:700}
-.esempio .info{padding:22px 26px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap}
-.esempio .t{font-family:"Syne",sans-serif; font-weight:600; font-size:20px}
-.esempio .d{color:var(--ink-2); font-size:15px; margin-top:4px; max-width:52ch}
-.esempio .go{font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--viola); font-weight:700; white-space:nowrap}
+  border:1px solid var(--linea); border-radius:var(--bordo); overflow:hidden; transition:border-color .14s ease}
+a.esempio:hover{border-color:var(--lime)}
+a.esempio:focus-visible{outline:3px solid var(--lime); outline-offset:3px}
+.anteprima{background:var(--ink); padding:46px 26px; text-align:center}
+.anteprima .finto{font-family:"Bricolage Grotesque",sans-serif; font-weight:800;
+  font-size:clamp(34px,8vw,58px); line-height:.9; color:var(--ground); letter-spacing:-.04em}
+.anteprima .sotto-finto{margin-top:14px; font-size:11.5px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--lime); font-weight:700}
+.esempio .info{padding:24px 26px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap}
+.esempio .t{font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:21px; letter-spacing:-.02em}
+.esempio .d{color:var(--ink-2); font-size:15px; margin-top:5px; max-width:54ch}
+.esempio .go{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); font-weight:700; white-space:nowrap}
 
-/* ---- liste ---- */
 ul.cosa{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:13px}
 @media(min-width:660px){ ul.cosa.due-col{grid-template-columns:1fr 1fr; column-gap:44px} }
-ul.cosa li{display:grid; grid-template-columns:26px 1fr; gap:12px; align-items:start}
-ul.cosa .s{font-family:"Syne",sans-serif; color:var(--viola); font-weight:800}
-ul.cosa li b{font-weight:700}
+ul.cosa li{display:grid; grid-template-columns:28px 1fr; gap:12px; align-items:start}
+ul.cosa .s{font-family:"Bricolage Grotesque",sans-serif; color:var(--lime); font-weight:800; font-size:18px}
+ul.cosa.passi li{padding:14px 0; border-bottom:1px solid var(--linea)}
+ul.cosa.passi li:last-child{border-bottom:none}
 
-.riquadro{background:var(--card); border:1px solid var(--linea); border-left:4px solid var(--viola);
-  border-radius:3px; padding:22px 26px; margin-top:28px; color:var(--ink-2)}
+.riquadro{background:var(--card); border:1px solid var(--linea); border-left:4px solid var(--lime);
+  border-radius:var(--bordo); padding:22px 26px; margin-top:26px; color:var(--ink-2)}
 .riquadro b{color:var(--ink)}
 
-footer{background:var(--ink); color:var(--ground); padding:56px 0 46px}
-footer .nome{font-family:"Syne",sans-serif; font-weight:800; font-size:28px; letter-spacing:-.03em; color:var(--ground)}
-footer p{margin:14px 0 0; font-size:15.5px; opacity:.72; line-height:1.7; max-width:44ch}
-footer b{color:var(--viola); opacity:1}
+footer{padding-bottom:60px}
+footer b{color:var(--lime); opacity:1}
 </style>
 </head>
 <body>
-
-<header class="hero">
+<div class="hero">
   <div class="centro">
-    <div class="occhio">Brescia e provincia</div>
-    <h1>Il tuo negozio,<br><em>anche su internet</em></h1>
-    <p class="occhiello">Un sito semplice e chiaro, che si legge bene dal telefono. Lo faccio io, qui a Brescia, in tre giorni.</p>
-    <div class="bottoni">
-      <a class="bt pieno" href="salone/">Guarda un esempio</a>
-      <a class="bt vuoto" href="#come">Come funziona</a>
+    <div class="blocco-nome">
+      <div class="eyebrow">Brescia e provincia</div>
+      <h1>Il tuo negozio,<br><em>anche online</em></h1>
+      <p>Un sito semplice e chiaro, che si legge bene dal telefono. Lo faccio io, qui a Brescia, in tre giorni.</p>
+      <div class="bottoni">
+        <a class="bt lime" href="salone/">Guarda un esempio</a>
+        <a class="bt filo" href="#come">Come funziona</a>
+      </div>
     </div>
-  </div>
-</header>
-
-<div class="fascia">
-  <div class="centro">
-    <div class="f-cella"><div class="n">500 &euro;</div><div class="e">tutto compreso</div></div>
-    <div class="f-cella"><div class="n">3 giorni</div><div class="e">e sei online</div></div>
-    <div class="f-cella"><div class="n">0 &euro;</div><div class="e">finch&eacute; non ti piace</div></div>
   </div>
 </div>
 
-<section>
+<div class="nastro">
+  <div class="nastro-scorre">
+    <span>Parrucchieri &nbsp;&bull;&nbsp; Ristoranti &nbsp;&bull;&nbsp; Estetiste &nbsp;&bull;&nbsp; Officine &nbsp;&bull;&nbsp; Palestre &nbsp;&bull;&nbsp; Bar &nbsp;&bull;&nbsp;</span>
+    <span>Parrucchieri &nbsp;&bull;&nbsp; Ristoranti &nbsp;&bull;&nbsp; Estetiste &nbsp;&bull;&nbsp; Officine &nbsp;&bull;&nbsp; Palestre &nbsp;&bull;&nbsp; Bar &nbsp;&bull;&nbsp;</span>
+  </div>
+</div>
+
+<section class="blocco">
   <div class="centro">
-    <div class="titolo"><h2>Un esempio</h2><span>negozio inventato</span></div>
+    <div class="numeri">
+      <div class="n-cella"><div class="n">500 &euro;</div><div class="e">tutto compreso</div></div>
+      <div class="n-cella"><div class="n">3 giorni</div><div class="e">e sei online</div></div>
+      <div class="n-cella"><div class="n">0 &euro;</div><div class="e">finch&eacute; non ti piace</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="blocco" style="padding-top:0">
+  <div class="centro">
+    <div class="titolo"><h2>Un esempio</h2><span class="tag">negozio inventato</span></div>
     <a class="esempio" href="salone/">
       <div class="anteprima">
         <div class="finto">Salone<br>Marta</div>
@@ -133,7 +226,7 @@ footer b{color:var(--viola); opacity:1}
   </div>
 </section>
 
-<section style="padding-top:0">
+<section class="blocco" style="padding-top:0">
   <div class="centro">
     <div class="titolo"><h2>Cosa c&rsquo;&egrave; dentro</h2></div>
     <ul class="cosa due-col">
@@ -149,10 +242,10 @@ footer b{color:var(--viola); opacity:1}
   </div>
 </section>
 
-<section style="padding-top:0" id="come">
+<section class="blocco" style="padding-top:0" id="come">
   <div class="centro">
-    <div class="titolo"><h2>Come funziona</h2><span>quattro passi</span></div>
-    <ul class="cosa">
+    <div class="titolo"><h2>Come funziona</h2><span class="tag">quattro passi</span></div>
+    <ul class="cosa passi">
       <li><span class="s">1</span><span>Mi mandate <b>nome, indirizzo, orari, listino</b> e qualche foto.</span></li>
       <li><span class="s">2</span><span>In <b>2-3 giorni</b> vi mando il sito da guardare.</span></li>
       <li><span class="s">3</span><span>Correggiamo insieme quello che non va.</span></li>
@@ -160,7 +253,7 @@ footer b{color:var(--viola); opacity:1}
     </ul>
     <div class="riquadro">
       <b>Il dominio &egrave; a parte.</b> Un indirizzo tipo <b>ilmionegozio.it</b> costa circa 12 &euro; l&rsquo;anno,
-      si compra a nome vostro e resta vostro. Se preferite, si parte con un indirizzo gratuito e il dominio si aggiunge dopo.
+      si compra a nome vostro e resta vostro. Se preferite si parte con un indirizzo gratuito, e il dominio si aggiunge dopo.
     </div>
   </div>
 </section>
