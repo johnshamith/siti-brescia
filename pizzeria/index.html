@@ -14,7 +14,7 @@
   --ink:#17130E; --ink-2:#5B5145; --ink-3:#8C8172;
   --linea:#E0D8C7; --linea-forte:#C4B9A2;
   --brace:#E4521B; --brace-b:#FBE3D6;
-  --scuro:#17130E; --su-scuro:#F6F1E6; --acc-scuro:#FF7A3D;
+  --scuro:#FFF4E6; --su-scuro:#1C1208; --acc-scuro:#CF3A11;
   --bordo:4px;
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
@@ -37,11 +37,11 @@ h1,h2,h3{margin:0; font-family:"Anton","Karla",sans-serif; font-weight:400;
   text-transform:uppercase; letter-spacing:.01em; text-wrap:balance}
 a{color:inherit}
 .centro{max-width:1000px; margin:0 auto; padding:0 20px}
-.avviso{background:var(--scuro); color:var(--su-scuro); font-size:11.5px; letter-spacing:.16em;
+.avviso{background:var(--su-scuro); color:var(--scuro); font-size:11.5px; letter-spacing:.16em;
   text-transform:uppercase; text-align:center; padding:10px 16px; font-weight:700}
 
 .hero{background:var(--scuro); color:var(--su-scuro); padding:52px 0 46px}
-.forno{display:inline-block; border:2px solid var(--acc-scuro); color:var(--acc-scuro);
+.forno{display:inline-block; background:var(--acc-scuro); color:#FFF4E6; border:2px solid var(--acc-scuro);
   font-size:11.5px; letter-spacing:.22em; text-transform:uppercase; font-weight:700;
   padding:7px 14px; margin-bottom:26px}
 h1{font-size:clamp(54px,16vw,146px); line-height:.85; color:var(--su-scuro)}
@@ -50,12 +50,12 @@ h1 em{font-style:normal; color:var(--acc-scuro)}
 .bottoni{display:flex; flex-wrap:wrap; gap:10px; margin-top:30px}
 .bt{display:inline-block; text-decoration:none; font-family:"Anton",sans-serif; text-transform:uppercase;
   letter-spacing:.06em; font-size:16px; padding:16px 30px; border-radius:var(--bordo)}
-.bt.pieno{background:var(--acc-scuro); color:#17130E}
+.bt.pieno{background:var(--acc-scuro); color:#FFF4E6}
 .bt.filo{border:2px solid var(--su-scuro); color:var(--su-scuro)}
 .bt.brace{background:var(--brace); color:#FFFFFF}
 .bt:focus-visible{outline:3px solid var(--acc-scuro); outline-offset:3px}
 
-.striscia{background:var(--acc-scuro); color:#17130E; padding:14px 0; overflow:hidden}
+.striscia{background:var(--acc-scuro); color:#FFF4E6; padding:14px 0; overflow:hidden}
 .scorre{display:inline-flex; gap:30px; white-space:nowrap; font-family:"Anton",sans-serif;
   text-transform:uppercase; letter-spacing:.16em; font-size:15px; animation:va 24s linear infinite}
 @keyframes va{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
@@ -92,7 +92,7 @@ h2{font-size:clamp(30px,6vw,54px)}
 .dove p{margin:0 0 14px; color:var(--ink-2)}
 .dove .grande{font-family:"Anton",sans-serif; font-size:24px; color:var(--ink); margin-bottom:4px; text-transform:none}
 
-.dice{background:var(--brace); color:#FFFFFF; border-radius:var(--bordo); padding:38px 30px}
+.dice{background:var(--acc-scuro); color:#FFFFFF; border-radius:var(--bordo); padding:38px 30px}
 .dice p{margin:0; font-family:"Anton",sans-serif; font-size:clamp(22px,3.6vw,36px);
   line-height:1.12; text-transform:uppercase}
 .dice .chi{margin-top:16px; font-family:"Karla",sans-serif; font-size:13px; letter-spacing:.14em;

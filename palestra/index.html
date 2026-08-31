@@ -10,21 +10,21 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap">
 <style>
 :root{
-  --nero:#0A0A0B; --su-nero:#F4F4F2; --lampo:#D6FF3D;
-  --ground:#0A0A0B; --card:#141416; --sunk:#101012;
-  --ink:#F4F4F2; --ink-2:#A6A6A2; --ink-3:#78787A;
-  --linea:#232326; --linea-forte:#38383C;
+  --nero:#F3F3F1; --su-nero:#0A0A0B; --lampo:#5B7A00;
+  --ground:#F3F3F1; --card:#FFFFFF; --sunk:#E7E7E4;
+  --ink:#0A0A0B; --ink-2:#55555A; --ink-3:#82828A;
+  --linea:#DEDEDA; --linea-forte:#BFBFBA;
   --bordo:3px;
 }
-:root[data-theme="light"]{
-  --ground:#F2F2F0; --card:#FFFFFF; --sunk:#E6E6E3;
-  --ink:#0A0A0B; --ink-2:#55555A; --ink-3:#82828A;
-  --linea:#DEDEDA; --linea-forte:#BFBFBA;
+:root[data-theme="dark"]{
+  --ground:#0C0C0D; --card:#151517; --sunk:#111113;
+  --ink:#F3F3F1; --ink-2:#A5A5A1; --ink-3:#7A7A7C;
+  --linea:#232326; --linea-forte:#38383C;
 }
-@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
-  --ground:#F2F2F0; --card:#FFFFFF; --sunk:#E6E6E3;
-  --ink:#0A0A0B; --ink-2:#55555A; --ink-3:#82828A;
-  --linea:#DEDEDA; --linea-forte:#BFBFBA;
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --ground:#0C0C0D; --card:#151517; --sunk:#111113;
+  --ink:#F3F3F1; --ink-2:#A5A5A1; --ink-3:#7A7A7C;
+  --linea:#232326; --linea-forte:#38383C;
 }}
 *{box-sizing:border-box}
 body{margin:0; background:var(--ground); color:var(--ink);
@@ -34,11 +34,11 @@ h1,h2,h3{margin:0; font-family:"Bebas Neue","Barlow",sans-serif; font-weight:400
   letter-spacing:.01em; text-wrap:balance; line-height:.94}
 a{color:inherit}
 .centro{max-width:1040px; margin:0 auto; padding:0 20px}
-.avviso{background:var(--lampo); color:var(--nero); font-size:11.5px; letter-spacing:.18em;
+.avviso{background:var(--su-nero); color:var(--nero); font-size:11.5px; letter-spacing:.18em;
   text-transform:uppercase; text-align:center; padding:10px 16px; font-weight:700}
 
 .hero{background:var(--nero); color:var(--su-nero); padding:54px 0 46px}
-.kicker{display:inline-block; background:var(--lampo); color:var(--nero); font-weight:700;
+.kicker{display:inline-block; background:var(--lampo); color:#FFFFFF; font-weight:700;
   font-size:12px; letter-spacing:.18em; text-transform:uppercase; padding:6px 13px; margin-bottom:24px}
 h1{font-size:clamp(64px,20vw,180px); color:var(--su-nero)}
 h1 em{font-style:normal; color:var(--lampo)}
@@ -46,11 +46,11 @@ h1 em{font-style:normal; color:var(--lampo)}
 .bottoni{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px}
 .bt{display:inline-block; text-decoration:none; font-family:"Bebas Neue",sans-serif; font-size:19px;
   letter-spacing:.06em; padding:14px 30px; border-radius:var(--bordo)}
-.bt.lampo{background:var(--lampo); color:var(--nero)}
+.bt.lampo{background:var(--lampo); color:#FFFFFF}
 .bt.filo{border:2px solid var(--su-nero); color:var(--su-nero)}
 .bt:focus-visible{outline:3px solid var(--lampo); outline-offset:3px}
 
-.striscia{background:var(--lampo); color:var(--nero); padding:12px 0; overflow:hidden}
+.striscia{background:var(--lampo); color:#FFFFFF; padding:12px 0; overflow:hidden}
 .scorre{display:inline-flex; gap:28px; white-space:nowrap; font-family:"Bebas Neue",sans-serif;
   font-size:19px; letter-spacing:.14em; animation:va 20s linear infinite}
 @keyframes va{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
@@ -60,7 +60,7 @@ section{padding:54px 0}
 .titolo{display:flex; align-items:baseline; gap:14px; margin-bottom:26px; flex-wrap:wrap}
 h2{font-size:clamp(36px,7vw,64px)}
 .tag{font-family:"Barlow",sans-serif; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
-  font-weight:700; color:var(--nero); background:var(--lampo); padding:5px 11px}
+  font-weight:700; color:#FFFFFF; background:var(--lampo); padding:5px 11px}
 
 .prezzi{display:grid; grid-template-columns:1fr; gap:14px}
 @media(min-width:760px){ .prezzi{grid-template-columns:repeat(3,1fr)} }
@@ -78,7 +78,7 @@ h2{font-size:clamp(36px,7vw,64px)}
 .tab-wrap{overflow-x:auto; border:1px solid var(--linea); border-radius:var(--bordo)}
 .griglia th,.griglia td{padding:13px 16px; text-align:left; border-bottom:1px solid var(--linea); white-space:nowrap}
 .griglia th{font-family:"Bebas Neue",sans-serif; font-size:17px; letter-spacing:.06em;
-  color:var(--nero); background:var(--lampo)}
+  color:#FFFFFF; background:var(--lampo)}
 .griglia tr:last-child td{border-bottom:none}
 .griglia td.ora{font-weight:700}
 

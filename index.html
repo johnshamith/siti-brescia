@@ -15,7 +15,7 @@
   --linea:#DCD8D1; --linea-forte:#BEB8AD;
   --lime:#4D6BFF; --su-lime:#FFFFFF;
   --rosa:#00A08C; --rosa-b:#D7F4EF;
-  --blocco:#14120F; --su-blocco:#F2F0EB; --acc-blocco:#93A8FF;
+  --blocco:#EDF0FF; --su-blocco:#0F1430; --acc-blocco:#2B41C9;
   --bordo:20px;
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
@@ -24,7 +24,7 @@
   --linea:#272521; --linea-forte:#3A3730;
   --lime:#8AA0FF; --su-lime:#FFFFFF;
   --rosa:#3FD6BE; --rosa-b:#0E2B27;
-  --blocco:#14120F; --su-blocco:#F2F0EB; --acc-blocco:#93A8FF;
+  --blocco:#EDF0FF; --su-blocco:#0F1430; --acc-blocco:#2B41C9;
 }}
 :root[data-theme="dark"]{
   --ground:#0D0C0A; --card:#171613; --sunk:#121110;
@@ -32,7 +32,7 @@
   --linea:#272521; --linea-forte:#3A3730;
   --lime:#8AA0FF; --su-lime:#FFFFFF;
   --rosa:#3FD6BE; --rosa-b:#0E2B27;
-  --blocco:#14120F; --su-blocco:#F2F0EB; --acc-blocco:#93A8FF;
+  --blocco:#EDF0FF; --su-blocco:#0F1430; --acc-blocco:#2B41C9;
 }
 *{box-sizing:border-box}
 body{margin:0; background:var(--ground); color:var(--ink);
@@ -43,13 +43,13 @@ h1,h2,h3{margin:0; font-family:"Bricolage Grotesque","Karla",sans-serif;
 a{color:inherit}
 .centro{max-width:1020px; margin:0 auto; padding:0 20px}
 
-.avviso{background:var(--blocco); color:var(--su-blocco); font-size:11.5px; letter-spacing:.16em;
+.avviso{background:var(--su-blocco); color:var(--blocco); font-size:11.5px; letter-spacing:.16em;
   text-transform:uppercase; text-align:center; padding:10px 16px; font-weight:700}
 
 /* ---------- apertura ---------- */
 .hero{padding:34px 0 30px}
 .blocco-nome{background:var(--blocco); border-radius:var(--bordo); padding:38px 28px 30px; color:var(--su-blocco)}
-.eyebrow{display:inline-block; background:var(--acc-blocco); color:var(--blocco);
+.eyebrow{display:inline-block; background:var(--acc-blocco); color:#FFFFFF;
   font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:12px; letter-spacing:.18em;
   text-transform:uppercase; padding:7px 14px; border-radius:99px; margin-bottom:24px}
 h1{font-size:clamp(52px,15vw,132px); line-height:.86; color:var(--su-blocco)}
@@ -61,15 +61,15 @@ h1 em{font-style:normal; color:var(--acc-blocco)}
 .bt{display:inline-block; text-decoration:none; font-family:"Bricolage Grotesque",sans-serif;
   font-weight:700; font-size:16.5px; padding:15px 28px; border-radius:99px;
   transition:transform .14s ease}
-.bt.lime{background:var(--lime); color:var(--su-lime)}
+.bt.lime{background:var(--acc-blocco); color:#FFFFFF}
 .bt.filo{border:1.5px solid var(--su-blocco); color:var(--su-blocco)}
-.bt.scuro{background:var(--blocco); color:var(--su-blocco)}
+.bt.scuro{background:var(--acc-blocco); color:#FFFFFF}
 .bt:hover{transform:translateY(-2px)}
 .bt:focus-visible{outline:3px solid var(--rosa); outline-offset:3px}
 @media (prefers-reduced-motion: reduce){ .bt{transition:none} .bt:hover{transform:none} .nastro-scorre{animation:none} }
 
 /* ---------- nastro ---------- */
-.nastro{background:var(--acc-blocco); color:var(--blocco); overflow:hidden; padding:13px 0;
+.nastro{background:var(--acc-blocco); color:#FFFFFF; overflow:hidden; padding:13px 0;
   border-top:2px solid var(--blocco); border-bottom:2px solid var(--blocco)}
 .nastro-scorre{display:inline-flex; gap:34px; white-space:nowrap;
   font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:15px;
@@ -97,7 +97,7 @@ h2{font-size:clamp(30px,6vw,52px)}
 .servizi{display:grid; grid-template-columns:1fr; gap:14px}
 @media(min-width:760px){ .servizi{grid-template-columns:repeat(3,1fr)} }
 .serv{background:var(--card); border:1px solid var(--linea); border-radius:var(--bordo); padding:26px 24px}
-.serv .q{display:inline-block; background:var(--blocco); color:var(--su-blocco);
+.serv .q{display:inline-block; background:var(--acc-blocco); color:#FFFFFF;
   font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:11.5px; letter-spacing:.16em;
   text-transform:uppercase; padding:6px 12px; border-radius:99px; margin-bottom:16px}
 .serv h3{font-size:21px; margin-bottom:8px; letter-spacing:-.02em}
@@ -152,7 +152,7 @@ a.esempio{display:block; text-decoration:none; color:inherit; background:var(--c
   border:1px solid var(--linea); border-radius:var(--bordo); overflow:hidden; transition:border-color .14s ease}
 a.esempio:hover{border-color:var(--lime)}
 a.esempio:focus-visible{outline:3px solid var(--lime); outline-offset:3px}
-.anteprima{background:var(--blocco); padding:46px 26px; text-align:center}
+.anteprima{padding:46px 26px; text-align:center}
 .anteprima .finto{font-family:"Bricolage Grotesque",sans-serif; font-weight:800;
   font-size:clamp(34px,8vw,58px); line-height:.9; color:var(--su-blocco); letter-spacing:-.04em}
 .anteprima .sotto-finto{margin-top:14px; font-size:11.5px; letter-spacing:.2em; text-transform:uppercase;
@@ -179,11 +179,11 @@ footer b{color:var(--acc-blocco); opacity:1}
   flex-direction:column; align-items:center; justify-content:center}
 .anteprima .finto{font-weight:800; font-size:clamp(28px,6vw,42px); line-height:.92; letter-spacing:-.04em}
 .anteprima .sotto-finto{margin-top:12px; font-size:11px; letter-spacing:.2em; text-transform:uppercase; font-weight:700}
-.a-salone{background:#14120F} .a-salone .finto{color:#F2F0EB; font-family:"Bricolage Grotesque",sans-serif} .a-salone .sotto-finto{color:#C8F031}
-.a-pizza{background:#17130E} .a-pizza .finto{color:#F6F1E6; font-family:"Bricolage Grotesque",sans-serif; text-transform:uppercase} .a-pizza .sotto-finto{color:#FF7A3D}
-.a-officina{background:#14181C} .a-officina .finto{color:#EEF0F2; font-family:"Bricolage Grotesque",sans-serif} .a-officina .sotto-finto{color:#FFC400}
-.a-estetista{background:#1E3A2F} .a-estetista .finto{color:#EDF2ED; font-family:"Karla",serif; font-weight:400; letter-spacing:-.01em} .a-estetista .sotto-finto{color:#D9B08C}
-.a-palestra{background:#0A0A0B} .a-palestra .finto{color:#F4F4F2; font-family:"Bricolage Grotesque",sans-serif; text-transform:uppercase} .a-palestra .sotto-finto{color:#D6FF3D}
+.a-salone{background:#FFF0F6} .a-salone .finto{color:#1B1018; font-family:"Bricolage Grotesque",sans-serif} .a-salone .sotto-finto{color:#C4186F}
+.a-pizza{background:#FFF4E6} .a-pizza .finto{color:#1C1208; font-family:"Bricolage Grotesque",sans-serif; text-transform:uppercase} .a-pizza .sotto-finto{color:#CF3A11}
+.a-officina{background:#F3F6F9} .a-officina .finto{color:#101418; font-family:"Bricolage Grotesque",sans-serif} .a-officina .sotto-finto{color:#0B5FA5}
+.a-estetista{background:#EDF3EE} .a-estetista .finto{color:#16241D; font-family:"Karla",serif; font-weight:400; letter-spacing:-.01em} .a-estetista .sotto-finto{color:#8A5A3C}
+.a-palestra{background:#F3F3F1} .a-palestra .finto{color:#0A0A0B; font-family:"Bricolage Grotesque",sans-serif; text-transform:uppercase} .a-palestra .sotto-finto{color:#5B7A00}
 .esempio .info{padding:20px 22px}
 .esempio .t{font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:19px; letter-spacing:-.02em}
 .esempio .d{color:var(--ink-2); font-size:14.5px; margin-top:5px}
